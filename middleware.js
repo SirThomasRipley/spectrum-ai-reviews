@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
-import { config } from './data/content';
+import { config as contentConfig } from './data/content';
 
-const { locales, defaultLocale } = config;
+const { locales, defaultLocale } = contentConfig;
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;

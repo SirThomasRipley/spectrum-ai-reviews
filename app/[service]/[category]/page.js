@@ -121,7 +121,7 @@ export default function ServiceCategoryPage({ params }) {
       <section className="p-8 bg-secondary rounded-lg">
         <h2 className="text-3xl font-bold font-display mb-4">Why {category.name} Matters</h2>
         <p className="text-secondary-foreground leading-relaxed">
-          In today's fast-paced digital landscape, {category.name.toLowerCase()} tools have become essential for professionals and businesses alike. 
+          In today&apos;s fast-paced digital landscape, {category.name.toLowerCase()} tools have become essential for professionals and businesses alike. 
           These AI-powered solutions can significantly enhance your workflow by automating repetitive tasks, providing intelligent insights, 
           and enabling you to focus on what matters most. Our comprehensive reviews help you choose the perfect tool for your specific needs.
         </p>

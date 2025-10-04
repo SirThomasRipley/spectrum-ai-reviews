@@ -1,0 +1,51 @@
+import Link from 'next/link';
+import { services } from '../../data/content';
+import Icon from '../../components/Icon';
+
+export default function HomePage({ params: { lang } }) {
+  const t = {
+    en: {
+      title: 'Unbiased Reviews of the Latest AI Tools',
+      subtitle: 'We test, review, and rank the best AI software on the market so you can make informed decisions. Welcome to your trusted resource in the age of AI.',
+      servicesTitle: 'Explore Our Review Categories'
+    },
+    fr: {
+      title: 'Avis Impartiaux sur les Derniers Outils d\'IA',
+      subtitle: 'Nous testons, évaluons et classons les meilleurs logiciels d\'IA du marché pour que vous puissiez prendre des décisions éclairées. Bienvenue sur votre ressource de confiance à l\'ère de l\'IA.',
+      servicesTitle: 'Explorez Nos Catégories d\'Avis'
+    }
+  }
+
+  return (
+    <div className="container mx-auto px-4">
+      {/* 1. Hero Section */}
+      <section className="text-center py-20">
+        <h1 className="text-5xl md:text-7xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-300">
+          {t[lang].title}
+        </h1>
+        <p className="mt-6 max-w-2xl mx-auto text-lg text-secondary-foreground">
+          {t[lang].subtitle}
+        </p>
+        <div className="mt-8">
+          <Link href={`/${lang}/${services[0][lang].slug}`} className="bg-primary text-primary-foreground font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+            Get Started
+          </Link>
+        </div>
+      </section>
+
+      {/* 2. Services Section */}
+      <section className="py-20">
+        <h2 className="text-4xl font-bold font-display text-center mb-12">{t[lang].servicesTitle}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map(service => (
+            <Link key={service.id} href={`/${lang}/${service[lang].slug}`} className="block p-8 bg-secondary rounded-lg border border-transparent hover:border-primary transition-colors">
+              <Icon name={service.icon} className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-xl font-bold font-display">{service[lang].name}</h3>
+              <p className="mt-2 text-secondary-foreground">{service[lang].description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}

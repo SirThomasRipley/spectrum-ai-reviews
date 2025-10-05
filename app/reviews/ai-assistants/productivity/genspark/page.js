@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { ChevronDown, Star, Phone, Zap, AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Users, Shield } from 'lucide-react';
 import AuthorBio from '@/components/AuthorBio';
 import Emoji from '@/components/Emoji';
@@ -10,7 +10,7 @@ const GensparkAIReview = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   // Table of Contents
-  const sections = [
+  const sections = useMemo(() => [
     { id: 'introduction', title: 'Introduction & First Impressions', level: 1 },
     { id: 'product-overview', title: 'Product Overview & Specifications', level: 1 },
     { id: 'design-build', title: 'Design & Build Quality', level: 1 },
@@ -26,7 +26,7 @@ const GensparkAIReview = () => {
     { id: 'where-to-buy', title: 'Where to Buy', level: 1 },
     { id: 'final-verdict', title: 'Final Verdict', level: 1 },
     { id: 'evidence-proof', title: 'Evidence & Proof', level: 1 }
-  ];
+  ], []);
 
   // Sticky sidebar functionality
   useEffect(() => {
@@ -44,7 +44,7 @@ const GensparkAIReview = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [sections]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -129,7 +129,7 @@ const GensparkAIReview = () => {
             Genspark AI Review 2025: Complete Analysis & Honest Verdict
           </h1>
           <p className="text-gray-600 mt-2">
-            The definitive review of Genspark AI's Super Agent, phone calling features, and real-world performance
+            The definitive review of Genspark AI&apos;s Super Agent, phone calling features, and real-world performance
           </p>
         </div>
       </header>
@@ -175,7 +175,7 @@ const GensparkAIReview = () => {
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
               <h3 className="font-semibold text-lg mb-3 text-blue-900">🎯 Key Takeaway</h3>
               <p className="text-blue-800 text-lg leading-relaxed mb-4">
-                Genspark AI delivers on its promise as a "Super Agent" with genuinely useful phone calling capabilities
+                Genspark AI delivers on its promise as a &ldquo;Super Agent&rdquo; with genuinely useful phone calling capabilities
                 and excellent research synthesis, but expect to hit credit limits faster than advertised and encounter
                 occasional reliability issues that require workarounds.
               </p>
@@ -203,7 +203,7 @@ const GensparkAIReview = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Genspark AI positions itself as an AI-powered search engine and autonomous agent platform.
                   Unlike traditional chatbots, it can make real phone calls, conduct multi-step research,
-                  and create comprehensive "Sparkpages" that synthesize information from multiple sources in real-time.
+                  and create comprehensive &ldquo;Sparkpages&rdquo; that synthesize information from multiple sources in real-time.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   The platform targets researchers, marketers, and professionals who need an AI that can
@@ -244,7 +244,7 @@ const GensparkAIReview = () => {
                 ></iframe>
               </div>
               <p className="text-gray-600 text-sm">
-                Kevin Stratvert's comprehensive tutorial showing Genspark's capabilities including phone calls and real-world tasks.
+                Kevin Stratvert&apos;s comprehensive tutorial showing Genspark&apos;s capabilities including phone calls and real-world tasks.
               </p>
             </div>
           </section>
@@ -255,7 +255,7 @@ const GensparkAIReview = () => {
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="font-semibold text-lg mb-4 text-blue-600">What's Included</h3>
+                <h3 className="font-semibold text-lg mb-4 text-blue-600">What&apos;s Included</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center"><CheckCircle size={16} className="text-green-500 mr-2" /> Web-based platform access</li>
                   <li className="flex items-center"><CheckCircle size={16} className="text-green-500 mr-2" /> Mobile app (iOS/Android)</li>
@@ -333,7 +333,7 @@ const GensparkAIReview = () => {
                   <StarRating rating={4} />
                 </div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Genspark's interface strikes a balance between functionality and simplicity. The Sparkpage format
+                  Genspark&apos;s interface strikes a balance between functionality and simplicity. The Sparkpage format
                   is visually appealing with clear typography, proper spacing, and intuitive navigation.
                 </p>
                 <div className="space-y-2 text-sm text-gray-600">
@@ -412,7 +412,7 @@ const GensparkAIReview = () => {
                 />
               </div>
               <p className="text-gray-600 text-sm mt-4">
-                Screenshots showing Genspark's clean interface design and mobile app layout
+                Screenshots showing Genspark&apos;s clean interface design and mobile app layout
               </p>
             </div>
           </section>
@@ -497,9 +497,9 @@ const GensparkAIReview = () => {
                 <h4 className="font-semibold text-lg mb-4">Sparkpage Example Analysis</h4>
                 <div className="bg-gray-50 p-4 rounded-lg mb-4">
                   <p className="text-gray-700 text-sm italic">
-                    "When I asked Genspark to research 'sustainable energy trends 2025', it produced a 12-section
+                    &ldquo;When I asked Genspark to research &lsquo;sustainable energy trends 2025&rsquo;, it produced a 12-section
                     Sparkpage covering policy changes, technology breakthroughs, and market forecasts. The built-in
-                    copilot allowed me to drill down into specific regions and technologies without losing context."
+                    copilot allowed me to drill down into specific regions and technologies without losing context.&rdquo;
                   </p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4 text-sm">
@@ -571,7 +571,7 @@ const GensparkAIReview = () => {
                     <div className="bg-red-50 p-4 rounded-lg">
                       <h5 className="font-semibold text-sm">Complex Customer Service ❌</h5>
                       <p className="text-xs text-gray-600 mt-1">
-                        Couldn't handle multi-department transfers or account-specific troubleshooting issues.
+                        Couldn&apos;t handle multi-department transfers or account-specific troubleshooting issues.
                       </p>
                     </div>
                     <div className="bg-red-50 p-4 rounded-lg">
@@ -604,7 +604,7 @@ const GensparkAIReview = () => {
                   ></iframe>
                 </div>
                 <p className="text-gray-600 text-sm">
-                  Official Genspark demo showing the "Call For Me" agent making an actual phone call to a business.
+                  Official Genspark demo showing the &ldquo;Call For Me&rdquo; agent making an actual phone call to a business.
                 </p>
               </div>
 
@@ -691,7 +691,7 @@ const GensparkAIReview = () => {
                     <XCircle size={16} className="text-red-500 mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-sm">Occasional Errors</h4>
-                      <p className="text-gray-600 text-xs">"Error generating response" requires page refresh 2-3 times daily</p>
+                      <p className="text-gray-600 text-xs">&ldquo;Error generating response&rdquo; requires page refresh 2-3 times daily</p>
                     </div>
                   </div>
                 </div>
@@ -731,22 +731,22 @@ const GensparkAIReview = () => {
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
                   <h4 className="font-semibold text-red-800 mb-2">Credit Depletion Issues</h4>
                   <p className="text-red-700 text-sm">
-                    "200 daily credits seem insufficient - I'm hitting limits after 3-4 hours of moderate use.
-                    Unclear task-to-credit ratios make budgeting impossible."
+                    &ldquo;200 daily credits seem insufficient - I&apos;m hitting limits after 3-4 hours of moderate use.
+                    Unclear task-to-credit ratios make budgeting impossible.&rdquo;
                   </p>
                 </div>
                 <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg">
                   <h4 className="font-semibold text-yellow-800 mb-2">Phone Call Reliability</h4>
                   <p className="text-yellow-700 text-sm">
-                    "Works great for simple tasks but fails unpredictably. Had to make backup calls manually
-                    for important business appointments."
+                    &ldquo;Works great for simple tasks but fails unpredictably. Had to make backup calls manually
+                    for important business appointments.&rdquo;
                   </p>
                 </div>
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
                   <h4 className="font-semibold text-blue-800 mb-2">Support Responsiveness</h4>
                   <p className="text-blue-700 text-sm">
-                    "Email support takes 2-3 days to respond. No live chat option makes troubleshooting
-                    time-sensitive issues frustrating."
+                    &ldquo;Email support takes 2-3 days to respond. No live chat option makes troubleshooting
+                    time-sensitive issues frustrating.&rdquo;
                   </p>
                 </div>
               </div>
@@ -893,7 +893,7 @@ const GensparkAIReview = () => {
                   <div>
                     <h4 className="font-semibold text-sm text-green-700 mb-1">Real-Time Data Access</h4>
                     <p className="text-green-600 text-xs">
-                      Unlike ChatGPT's training cutoff limitations, Genspark provides current information
+                      Unlike ChatGPT&apos;s training cutoff limitations, Genspark provides current information
                       with proper source attribution.
                     </p>
                   </div>
@@ -912,7 +912,7 @@ const GensparkAIReview = () => {
                   <div>
                     <h4 className="font-semibold text-sm text-red-700 mb-1">Inconsistent Reliability</h4>
                     <p className="text-red-600 text-xs">
-                      "Error generating response" occurs 3-5 times daily. Phone calls fail unpredictably,
+                      &ldquo;Error generating response&rdquo; occurs 3-5 times daily. Phone calls fail unpredictably,
                       requiring backup plans for important tasks.
                     </p>
                   </div>
@@ -1421,7 +1421,7 @@ const GensparkAIReview = () => {
                         allowFullScreen
                       ></iframe>
                     </div>
-                    <h4 className="font-semibold text-sm">Greg Isenberg's Unbiased Review</h4>
+                    <h4 className="font-semibold text-sm">Greg Isenberg&apos;s Unbiased Review</h4>
                     <p className="text-xs text-gray-600">Independent comparison testing Genspark against ChatGPT across multiple scenarios</p>
                   </div>
                   <div>
@@ -1469,9 +1469,9 @@ const GensparkAIReview = () => {
                 <div className="space-y-4">
                   <div className="p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
                     <p className="text-green-800 text-sm italic mb-2">
-                      "As a small restaurant owner, Genspark's phone calling feature has been a game-changer.
-                      It successfully booked supplier appointments and handled customer inquiries when we're busy.
-                      Not perfect, but saves me 2-3 hours daily."
+                      &ldquo;As a small restaurant owner, Genspark&apos;s phone calling feature has been a game-changer.
+                      It successfully booked supplier appointments and handled customer inquiries when we&apos;re busy.
+                      Not perfect, but saves me 2-3 hours daily.&rdquo;
                     </p>
                     <div className="text-xs text-green-600">
                       <strong>Maria S.</strong> - Restaurant Owner, San Francisco (August 2025)
@@ -1479,9 +1479,9 @@ const GensparkAIReview = () => {
                   </div>
                   <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
                     <p className="text-blue-800 text-sm italic mb-2">
-                      "The research quality is impressive. Created a 20-page market analysis report that would have
+                      &ldquo;The research quality is impressive. Created a 20-page market analysis report that would have
                       taken my junior analyst a full week. Citations were accurate and sources were current.
-                      Worth the subscription cost for our consulting firm."
+                      Worth the subscription cost for our consulting firm.&rdquo;
                     </p>
                     <div className="text-xs text-blue-600">
                       <strong>David L.</strong> - Management Consultant, Boston (September 2025)
@@ -1489,9 +1489,9 @@ const GensparkAIReview = () => {
                   </div>
                   <div className="p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
                     <p className="text-yellow-800 text-sm italic mb-2">
-                      "Phone calls work about 80% of the time for simple tasks like appointment booking.
+                      &ldquo;Phone calls work about 80% of the time for simple tasks like appointment booking.
                       Failed completely when trying to resolve a complex insurance claim. Good for basic stuff,
-                      but keep backup plans for important calls."
+                      but keep backup plans for important calls.&rdquo;
                     </p>
                     <div className="text-xs text-yellow-600">
                       <strong>Jennifer R.</strong> - Marketing Agency Owner, Austin (October 2025)
@@ -1509,7 +1509,7 @@ const GensparkAIReview = () => {
                     After 30 days of daily use, Genspark has become an integral part of my workflow despite its
                     quirks. The phone calling feature reliability improved noticeably after mid-September updates.
                     Credit consumption stabilized once I understood the system better. Still experiencing occasional
-                    "error generating response" messages, but less frequently than initial testing period.
+                    &ldquo;error generating response&rdquo; messages, but less frequently than initial testing period.
                     <br/><br/>
                     <strong>Key insight:</strong> Success with Genspark requires adapting your expectations and
                     workflows to its strengths while maintaining alternatives for its weaknesses. Not a replacement

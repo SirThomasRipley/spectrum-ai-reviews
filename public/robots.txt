@@ -1,0 +1,24 @@
+# Robots.txt for SpectrumAIReviews.com
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://spectrumaireviews.com/sitemap.xml

@@ -1,5 +1,7 @@
 import { services, categories } from '../../../data/content';
+import { getReviewsByServiceAndCategory } from '../../../data/reviews';
 import Icon from '../../../components/Icon';
+import Link from 'next/link';
 
 export const revalidate = 3600;
 
@@ -34,6 +36,7 @@ export async function generateMetadata({ params }) {
 export default function ServiceCategoryPage({ params }) {
   const service = services.find(s => s.slug === params.service);
   const category = categories.find(c => c.slug === params.category);
+  const categoryReviews = getReviewsByServiceAndCategory(params.service, params.category);
 
   if (!service || !category) return <div>Not Found</div>;
 
@@ -50,73 +53,96 @@ export default function ServiceCategoryPage({ params }) {
       </header>
 
       <section>
-        <h2 className="text-3xl font-bold font-display mb-6">Top 3 Recommended Tools</h2>
-        <div className="space-y-4">
-          <div className="p-6 bg-secondary rounded-lg border border-primary">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-xl font-bold">#1 Tool Name</h3>
-                <p className="text-secondary-foreground mt-2">Best overall for {category.name.toLowerCase()}. Offers comprehensive features and excellent value.</p>
-              </div>
-              <div className="text-primary font-bold text-2xl">9.8/10</div>
-            </div>
+        <h2 className="text-3xl font-bold font-display mb-6">
+          {categoryReviews.length > 0 ? 'Top Recommended Tools' : 'Reviews Coming Soon'}
+        </h2>
+
+        {categoryReviews.length > 0 ? (
+          <div className="space-y-4">
+            {categoryReviews.slice(0, 3).map((review, index) => (
+              <Link
+                key={review.slug}
+                href={review.reviewUrl}
+                className="block p-6 bg-secondary rounded-lg hover:border hover:border-primary transition-all"
+                style={index === 0 ? { borderWidth: '1px', borderColor: 'var(--primary)' } : {}}
+              >
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-xl font-bold">#{index + 1} {review.title}</h3>
+                      {review.badge && (
+                        <span className="text-xs bg-primary text-white px-2 py-1 rounded">
+                          {review.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-secondary-foreground mt-2 mb-3">{review.summary}</p>
+                    <div className="flex items-center gap-4 text-sm">
+                      <span className="text-yellow-500">★ {review.displayRating}</span>
+                      <span className="text-secondary-foreground">({review.reviewCount} Reviews)</span>
+                      {review.price.starter && (
+                        <span className="text-secondary-foreground">
+                          From ${review.price.starter.cost}/{review.price.starter.period}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="text-primary font-bold text-2xl ml-4">{review.rating}/10</div>
+                </div>
+              </Link>
+            ))}
           </div>
-          <div className="p-6 bg-secondary rounded-lg">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-xl font-bold">#2 Tool Name</h3>
-                <p className="text-secondary-foreground mt-2">Great alternative with unique features perfect for {category.name.toLowerCase()}.</p>
-              </div>
-              <div className="text-primary font-bold text-2xl">9.5/10</div>
-            </div>
+        ) : (
+          <div className="p-12 bg-secondary rounded-lg border-2 border-dashed text-center">
+            <div className="text-6xl mb-4">🚧</div>
+            <h3 className="text-2xl font-bold mb-4">Reviews Coming Soon</h3>
+            <p className="text-secondary-foreground max-w-2xl mx-auto">
+              We are currently working on comprehensive reviews for {service.name} in the {category.name} category.
+              Our team is thoroughly testing and evaluating the top tools to provide you with detailed, unbiased reviews.
+              Check back soon!
+            </p>
           </div>
-          <div className="p-6 bg-secondary rounded-lg">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-xl font-bold">#3 Tool Name</h3>
-                <p className="text-secondary-foreground mt-2">Budget-friendly option that still delivers quality for {category.name.toLowerCase()}.</p>
-              </div>
-              <div className="text-primary font-bold text-2xl">9.2/10</div>
-            </div>
-          </div>
-        </div>
+        )}
       </section>
 
-      <section>
-        <h2 className="text-3xl font-bold font-display mb-6">Key Features Comparison</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full bg-secondary rounded-lg">
-            <thead>
-              <tr className="border-b border-background">
-                <th className="p-4 text-left">Feature</th>
-                <th className="p-4 text-center">Tool #1</th>
-                <th className="p-4 text-center">Tool #2</th>
-                <th className="p-4 text-center">Tool #3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-background">
-                <td className="p-4">Ease of Use</td>
-                <td className="p-4 text-center text-primary">✓</td>
-                <td className="p-4 text-center text-primary">✓</td>
-                <td className="p-4 text-center">○</td>
-              </tr>
-              <tr className="border-b border-background">
-                <td className="p-4">Advanced Features</td>
-                <td className="p-4 text-center text-primary">✓</td>
-                <td className="p-4 text-center text-primary">✓</td>
-                <td className="p-4 text-center text-primary">✓</td>
-              </tr>
-              <tr>
-                <td className="p-4">Price Value</td>
-                <td className="p-4 text-center text-primary">✓</td>
-                <td className="p-4 text-center">○</td>
-                <td className="p-4 text-center text-primary">✓</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      {categoryReviews.length > 1 && (
+        <section>
+          <h2 className="text-3xl font-bold font-display mb-6">Quick Comparison</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-secondary rounded-lg">
+              <thead>
+                <tr className="border-b border-background">
+                  <th className="p-4 text-left">Tool</th>
+                  <th className="p-4 text-center">Rating</th>
+                  <th className="p-4 text-center">Starting Price</th>
+                  <th className="p-4 text-center">Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                {categoryReviews.slice(0, 3).map((review, index) => (
+                  <tr key={review.slug} className={index !== categoryReviews.slice(0, 3).length - 1 ? 'border-b border-background' : ''}>
+                    <td className="p-4">
+                      <Link href={review.reviewUrl} className="font-bold text-primary hover:underline">
+                        {review.title}
+                      </Link>
+                    </td>
+                    <td className="p-4 text-center">
+                      <span className="text-primary font-bold">{review.rating}/10</span>
+                    </td>
+                    <td className="p-4 text-center">
+                      {review.price.free?.cost === 0 && 'Free'}
+                      {review.price.starter && review.price.free?.cost !== 0 && `$${review.price.starter.cost}/${review.price.starter.period}`}
+                    </td>
+                    <td className="p-4 text-center text-sm">
+                      {review.bestFor && review.bestFor[0]}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
 
       <section className="p-8 bg-secondary rounded-lg">
         <h2 className="text-3xl font-bold font-display mb-4">Why {category.name} Matters</h2>
@@ -145,10 +171,25 @@ export default function ServiceCategoryPage({ params }) {
         </div>
       </section>
 
-      <section className="text-center bg-gradient-to-r from-primary/20 to-purple-900/20 p-12 rounded-lg">
-        <h2 className="text-3xl font-bold font-display">Ready to Get Started?</h2>
-        <p className="mt-2 text-secondary-foreground">Explore our full in-depth reviews to find the perfect tool for your {category.name.toLowerCase()} needs.</p>
-      </section>
+      {categoryReviews.length > 0 && (
+        <section className="text-center bg-gradient-to-r from-primary/20 to-purple-900/20 p-12 rounded-lg">
+          <h2 className="text-3xl font-bold font-display">Ready to Get Started?</h2>
+          <p className="mt-2 text-secondary-foreground mb-6">
+            Explore our full in-depth reviews to find the perfect tool for your {category.name.toLowerCase()} needs.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            {categoryReviews.slice(0, 3).map(review => (
+              <Link
+                key={review.slug}
+                href={review.reviewUrl}
+                className="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition"
+              >
+                Read {review.title} Review
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

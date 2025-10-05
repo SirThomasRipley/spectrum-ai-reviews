@@ -1,9 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-background text-foreground;
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+  }
+
+  /* Ensure emoji support - more robust version */
+  .emoji, 
+  span[role="img"],
+  [data-emoji] {
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Color', 'Twemoji Mozilla', sans-serif !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: baseline;
+  }
+  
+  /* Force emoji rendering for all emoji characters */
+  *:not(input):not(textarea) {
+    font-variant-emoji: emoji;
+  }
+  
+  /* Unicode emoji range fallback */
+  @supports (font-variation-settings: normal) {
+    body {
+      font-variation-settings: normal;
+    }
+  }
+  
+  /* Specific emoji unicode ranges */
+  @font-face {
+    font-family: 'EmojiFont';
+    src: local('Apple Color Emoji'),
+         local('Segoe UI Emoji'),
+         local('Segoe UI Symbol'),
+         local('Noto Color Emoji'),
+         local('Android Emoji'),
+         local('EmojiSymbols');
+    unicode-range: U+1F300-1F6FF, U+1F900-1F9FF, U+2600-26FF, U+2700-27BF, U+1F680-1F6FF;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Better link styling */
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Improve readability for article content */
+  article {
+    @apply text-gray-800;
+  }
+
+  article h1 {
+    @apply text-gray-900;
+  }
+
+  article h2 {
+    @apply text-gray-900;
+  }
+
+  article h3 {
+    @apply text-gray-900;
+  }
+
+  article p {
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  /* Better contrast for cards and sections */
+  .bg-gradient-to-r {
+    @apply shadow-sm;
+  }
+
+  /* Ensure good contrast for all text */
+  .text-secondary-foreground {
+    @apply text-gray-600;
+  }
 }

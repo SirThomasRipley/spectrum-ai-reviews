@@ -92,6 +92,26 @@ const ZebracatReview = () => {
         </div>
       </section>
 
+      {/* Special Offer Banner */}
+      <section className="bg-gradient-to-r from-green-500 to-emerald-600 py-6">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-center text-white text-center md:text-left gap-4">
+            <div className="flex items-center">
+              <span className="text-3xl mr-3">🎉</span>
+              <div>
+                <p className="font-bold text-xl">Limited Time Offer!</p>
+                <p className="text-sm opacity-90">Use code <span className="bg-white text-green-600 px-2 py-1 rounded font-mono font-bold">BLSNUMRG</span> for 15% OFF all plans</p>
+              </div>
+            </div>
+            <Link href="http://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
+              <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-bold hover:bg-green-50 transition-all shadow-lg">
+                Claim Your Discount →
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content with Sticky Sidebar */}
       <div className="container mx-auto px-6 py-12">
         <div className="grid lg:grid-cols-12 gap-8">
@@ -881,13 +901,15 @@ const ZebracatReview = () => {
                         </li>
                       ))}
                     </ul>
-                    <button className={`w-full py-3 rounded-lg font-semibold transition-all ${
-                      plan.popular
-                        ? 'bg-white text-purple-600 hover:bg-gray-100'
-                        : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:shadow-lg'
-                    }`}>
-                      {plan.cta}
-                    </button>
+                    <Link href="http://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
+                      <button className={`w-full py-3 rounded-lg font-semibold transition-all ${
+                        plan.popular
+                          ? 'bg-white text-purple-600 hover:bg-gray-100'
+                          : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:shadow-lg'
+                      }`}>
+                        {plan.cta}
+                      </button>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -895,6 +917,26 @@ const ZebracatReview = () => {
               {/* Money-Saving Tips */}
               <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-xl p-6">
                 <h3 className="font-bold text-xl mb-4 text-amber-800"><Emoji>💰</Emoji> Money-Saving Tips</h3>
+
+                {/* Exclusive Coupon Alert */}
+                <div className="bg-gradient-to-r from-green-100 to-emerald-100 border-2 border-green-400 rounded-lg p-4 mb-6">
+                  <div className="flex items-center mb-2">
+                    <Emoji>🎉</Emoji>
+                    <span className="font-bold text-green-800 ml-2">Exclusive Coupon Code!</span>
+                  </div>
+                  <p className="text-gray-800 font-medium mb-2">
+                    Use code <span className="bg-green-600 text-white px-3 py-1 rounded font-mono font-bold">BLSNUMRG</span> for 15% off on all payments!
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    * This exclusive discount applies when you sign up through our affiliate link
+                  </p>
+                  <Link href="http://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
+                    <button className="mt-3 bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                      Claim 15% Discount Now →
+                    </button>
+                  </Link>
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-2">Annual Billing</h4>
@@ -966,7 +1008,7 @@ const ZebracatReview = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="https://zebracat.ai" target="_blank" rel="noopener noreferrer">
+                <Link href="http://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
                   <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
                     Try Zebracat Free <Emoji>→</Emoji>
                   </button>
@@ -1064,7 +1106,7 @@ const ZebracatReview = () => {
                 Join thousands of creators already using Zebracat to produce professional videos in minutes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="https://zebracat.ai" target="_blank" rel="noopener noreferrer">
+                <Link href="http://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
                   <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all transform hover:scale-105">
                     Start Your Free Trial <Emoji>→</Emoji>
                   </button>

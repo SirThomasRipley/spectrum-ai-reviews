@@ -1,6 +1,7 @@
 # Cloudflare Pages Configuration
 name = "spectrum-ai-reviews"
 compatibility_date = "2025-01-05"
+pages_build_output_dir = "out"
 
 # Pages build configuration
 [build]
@@ -47,5 +48,4 @@ for = "/images/*"
 Cache-Control = "public, max-age=31536000, immutable"
 
 # Edge Functions configuration (if needed)
-[compatibility_flags]
-nodejs_compat = true
+compatibility_flags = ["nodejs_compat"]

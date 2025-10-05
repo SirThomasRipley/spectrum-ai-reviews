@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Output configuration for Cloudflare Pages
-  output: 'standalone',
+  output: 'export',
 
   // Optimize for production
   swcMinify: true,

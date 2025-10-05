@@ -157,19 +157,19 @@ export default function ZebracatReviewPage() {
         '@type': 'ListItem',
         position: 2,
         name: 'AI Art & Video Generator Reviews',
-        item: 'https://spectrumaireviews.com/ai-art-generators',
+        item: 'https://spectrumaireviews.com/ai-art-generator-reviews',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Content Creation',
-        item: 'https://spectrumaireviews.com/ai-art-generators/content-creation',
+        item: 'https://spectrumaireviews.com/ai-art-generator-reviews/content-creation',
       },
       {
         '@type': 'ListItem',
         position: 4,
         name: 'Zebracat Review',
-        item: 'https://spectrumaireviews.com/reviews/ai-art-generators/content-creation/zebracat',
+        item: 'https://spectrumaireviews.com/reviews/ai-art-generator-reviews/content-creation/zebracat',
       },
     ],
   };

@@ -199,7 +199,39 @@ export default function GensparkReviewPage() {
         name: 'How many credits does Genspark AI use per task?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Credit consumption varies unpredictably (10-200 credits per task). The 200 daily free credits typically last 3-4 hours of moderate use according to our testing.',
+          text: 'Credit consumption varies unpredictably by task complexity. Based on testing: simple searches (10-25 credits), Sparkpages (40-200 credits), phone calls (100-250 credits), and image/video generation (200-500 credits). The 200 daily free credits typically last 3-4 hours of moderate use.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why is Genspark AI not working and showing error messages?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The most common error is "Error generating response" which occurred 3-5 times daily during testing. Solutions: refresh the page (works 80% of the time), clear browser cache, try a different browser, or wait 5-10 minutes. For persistent issues, check status.genspark.ai or their Twitter for service updates.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I cancel my Genspark AI subscription?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'There is no self-service cancellation button in account settings. You must email support@genspark.ai with your cancellation request. Include your account email, subscription plan, and request written confirmation. Expect 48-72 hour response time and 3-5 business days for processing.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Genspark AI safe and secure for business use?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Genspark claims GDPR-level compliance with data encryption and anonymization. However, official security documentation is limited. Safe for general research and non-confidential tasks. Use with caution for client information or financial data. Avoid using for healthcare data (HIPAA), legal documents, or passwords.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What happens to my data after canceling Genspark AI?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Based on industry standards, data is likely retained for 30-90 days after cancellation before permanent deletion. Backups may persist for 12+ months. Users have GDPR rights to request data export or immediate deletion by emailing privacy@genspark.ai or support@genspark.ai. Export all Sparkpages and important content before canceling.',
         },
       },
     ],

@@ -99,7 +99,7 @@ const ZebracatReview = () => {
                 <p className="text-sm opacity-90">Use code <span className="bg-white text-green-600 px-2 py-1 rounded font-mono font-bold">BLSNUMRG</span> for 15% OFF all plans</p>
               </div>
             </div>
-            <Link href="https://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
+            <Link href="https://studio.zebracat.ai/login/?via=SpectrumAIReviews" target="_blank" rel="noopener noreferrer">
               <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-bold hover:bg-green-50 transition-all shadow-lg">
                 Claim Your Discount →
               </button>
@@ -897,7 +897,7 @@ const ZebracatReview = () => {
                         </li>
                       ))}
                     </ul>
-                    <Link href="https://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://studio.zebracat.ai/login/?via=SpectrumAIReviews" target="_blank" rel="noopener noreferrer">
                       <button className={`w-full py-3 rounded-lg font-semibold transition-all ${
                         plan.popular
                           ? 'bg-white text-purple-600 hover:bg-gray-100'
@@ -926,7 +926,7 @@ const ZebracatReview = () => {
                   <p className="text-sm text-gray-600">
                     * This exclusive discount applies when you sign up through our affiliate link
                   </p>
-                  <Link href="https://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://studio.zebracat.ai/login/?via=SpectrumAIReviews" target="_blank" rel="noopener noreferrer">
                     <button className="mt-3 bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors">
                       Claim 15% Discount Now →
                     </button>
@@ -1004,7 +1004,7 @@ const ZebracatReview = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="https://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
+                <Link href="https://studio.zebracat.ai/login/?via=SpectrumAIReviews" target="_blank" rel="noopener noreferrer">
                   <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
                     Try Zebracat Free <Emoji>→</Emoji>
                   </button>
@@ -1102,7 +1102,7 @@ const ZebracatReview = () => {
                 Join thousands of creators already using Zebracat to produce professional videos in minutes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="https://studio.zebracat.ai/signup/?via=michael-anderson" target="_blank" rel="noopener noreferrer">
+                <Link href="https://studio.zebracat.ai/login/?via=SpectrumAIReviews" target="_blank" rel="noopener noreferrer">
                   <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all transform hover:scale-105">
                     Start Your Free Trial <Emoji>→</Emoji>
                   </button>

@@ -65,37 +65,80 @@ export default function HomePage() {
               worstRating: '1'
             }
           }
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          item: {
+            '@type': 'Review',
+            name: 'Genspark AI Review 2025',
+            url: 'https://spectrumaireviews.com/reviews/ai-assistants/productivity/genspark',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '4.0',
+              bestRating: '5',
+              worstRating: '1'
+            }
+          }
         }
       ]
     }
   };
 
-  const featuredReviewJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: {
-      '@type': 'SoftwareApplication',
-      name: 'Zebracat AI',
-      applicationCategory: 'AI Video Generator',
-      operatingSystem: 'Web',
+  const featuredReviewJsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      itemReviewed: {
+        '@type': 'SoftwareApplication',
+        name: 'Zebracat AI',
+        applicationCategory: 'AI Video Generator',
+        operatingSystem: 'Web',
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Michael Anderson',
+        jobTitle: 'Senior Digital Marketing Specialist',
+      },
+      datePublished: '2025-01-15',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.6',
+        bestRating: '5',
+        worstRating: '1'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'SpectrumAIReviews'
+      }
     },
-    author: {
-      '@type': 'Person',
-      name: 'Michael Anderson',
-      jobTitle: 'Senior Digital Marketing Specialist',
-    },
-    datePublished: '2025-01-15',
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '4.6',
-      bestRating: '5',
-      worstRating: '1'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'SpectrumAIReviews'
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      itemReviewed: {
+        '@type': 'SoftwareApplication',
+        name: 'Genspark AI',
+        applicationCategory: 'AI Assistant & Agent',
+        operatingSystem: 'Web, iOS, Android',
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Michael Anderson',
+        jobTitle: 'Senior Digital Marketing Specialist',
+      },
+      datePublished: '2025-01-15',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.0',
+        bestRating: '5',
+        worstRating: '1'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'SpectrumAIReviews'
+      }
     }
-  };
+  ];
 
   return (
     <>
@@ -104,11 +147,14 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Script
-        id="json-ld-featured-review"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(featuredReviewJsonLd) }}
-      />
+      {featuredReviewJsonLd.map((review, index) => (
+        <Script
+          key={`review-${index}`}
+          id={`json-ld-featured-review-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(review) }}
+        />
+      ))}
 
       <div className="container mx-auto px-4">
         {/* Hero Section with SEO-Optimized Content */}
@@ -250,6 +296,102 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Featured Review Section - Genspark AI */}
+        <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl mb-20">
+          <div className="px-8">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">FEATURED REVIEW</span>
+              <span className="bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full">NEW FOR 2025</span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <Emoji label="robot">🤖</Emoji> Genspark AI: Revolutionary AI Agent That Makes Real Phone Calls
+            </h2>
+
+            <article className="bg-white rounded-lg p-8 shadow-lg">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Why Genspark AI Is Different</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 text-xl"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span><strong>Phone Calling AI:</strong> First AI agent that actually makes phone calls for you</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 text-xl"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span><strong>Real-World Actions:</strong> Bridges digital and physical tasks seamlessly</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 text-xl"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span><strong>Research Excellence:</strong> Sparkpages deliver publication-quality analysis</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 text-xl"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span><strong>Multi-Step Automation:</strong> Super Agent handles complex workflows</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-lg font-bold">Overall Rating</h4>
+                      <div className="flex text-yellow-400 text-xl">
+                        <Emoji label="4 star rating">⭐⭐⭐⭐</Emoji>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>Innovation</span>
+                          <span>5.0/5</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-2">
+                          <div className="bg-primary rounded-full h-2" style={{width: '100%'}}></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>Phone Call Quality</span>
+                          <span>4.2/5</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-2">
+                          <div className="bg-primary rounded-full h-2" style={{width: '84%'}}></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>Reliability</span>
+                          <span>3.7/5</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-2">
+                          <div className="bg-primary rounded-full h-2" style={{width: '74%'}}></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Link
+                      href="/reviews/ai-assistants/productivity/genspark"
+                      className="mt-6 block text-center bg-primary text-primary-foreground font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity"
+                    >
+                      Read Full Genspark Review <Emoji label="arrow right">→</Emoji>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
+                <p className="text-sm">
+                  <strong>Expert Verdict:</strong> &ldquo;Genspark AI delivers genuinely innovative features no other platform offers.
+                  The phone calling capability is revolutionary, though expect occasional reliability issues that require backup plans.
+                  Perfect for small businesses and professionals who can tolerate 15-20% failure rates.&rdquo;
+                  - <em>Michael Anderson, Senior Digital Marketing Specialist</em>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
         {/* Categories Section with Better SEO */}
         <section id="categories" className="py-20">
           <header>
@@ -284,6 +426,11 @@ export default function HomePage() {
                   {index === 1 && (
                     <div className="mt-4 text-xs bg-green-100 text-green-700 px-2 py-1 rounded inline-block">
                       <Emoji label="star">⭐</Emoji> Featured: Zebracat Review
+                    </div>
+                  )}
+                  {service.id === 'ai-assistants' && (
+                    <div className="mt-4 text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded inline-block">
+                      <Emoji label="star">⭐</Emoji> Featured: Genspark AI Review
                     </div>
                   )}
                 </Link>

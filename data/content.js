@@ -28,6 +28,14 @@ export const services = [
     keywords: 'AI SEO tools, SEO automation, ranking software',
     icon: 'chart',
   },
+  {
+    id: 'ai-assistants',
+    name: 'AI Assistant & Agent Reviews',
+    description: 'Comprehensive reviews of AI assistants, chatbots, and autonomous agents that enhance productivity and automate tasks.',
+    slug: 'ai-assistant-agent-reviews',
+    keywords: 'AI assistants, Genspark AI review, ChatGPT alternatives, AI agents, productivity AI tools',
+    icon: 'bot',
+  },
 ];
 
 export const categories = [

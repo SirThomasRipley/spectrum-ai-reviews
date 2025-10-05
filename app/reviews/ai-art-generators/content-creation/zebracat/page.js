@@ -3,8 +3,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import AuthorBio from '@/components/AuthorBio';
 import Emoji from '@/components/Emoji';
 import {
@@ -55,8 +53,6 @@ const ZebracatReview = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-
       {/* Hero Section with Rating Box */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
@@ -1125,8 +1121,6 @@ const ZebracatReview = () => {
           </main>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

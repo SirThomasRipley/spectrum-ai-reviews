@@ -119,7 +119,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-lg text-secondary-foreground">
               <strong>Expert-tested AI tool reviews</strong> you can trust. We rigorously test and compare the best AI software
-              to help you make informed decisions. Join 50,000+ professionals who rely on our unbiased AI product reviews.
+              to help you make informed decisions with our unbiased AI product reviews.
             </p>
 
             {/* Trust Signals */}
@@ -135,10 +135,6 @@ export default function HomePage() {
               <div className="flex items-center gap-2">
                 <span className="text-2xl"><Emoji label="chart">📊</Emoji></span>
                 <span className="text-sm font-semibold">Data-Driven Analysis</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl"><Emoji label="trophy">🏆</Emoji></span>
-                <span className="text-sm font-semibold">50,000+ Users Trust Us</span>
               </div>
             </div>
 

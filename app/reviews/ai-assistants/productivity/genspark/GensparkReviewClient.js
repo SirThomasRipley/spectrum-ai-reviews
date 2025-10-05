@@ -170,27 +170,78 @@ const GensparkAIReview = () => {
         </div>
       </div>
 
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Genspark AI Review 2025: Complete Analysis & Honest Verdict
-          </h1>
-          <p className="text-gray-600 mt-2">
-            The definitive review of Genspark AI&apos;s Super Agent, phone calling features, and real-world performance
-          </p>
-          <div className="mt-3 flex items-center space-x-4 text-sm text-gray-500">
-            <span>By Michael Anderson</span>
-            <span>•</span>
-            <span>Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-            <span>•</span>
-            <span className="flex items-center">
-              <Star size={16} className="text-yellow-400 fill-current mr-1" />
-              7.3/10 Rating
-            </span>
+      {/* Hero Section with Rating Box */}
+      <section className="bg-gradient-to-r from-blue-600 via-teal-600 to-cyan-600 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <Phone className="w-8 h-8" />
+                <Zap className="w-8 h-8" />
+                <TrendingUp className="w-8 h-8" />
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Genspark AI Review 2025: Complete Analysis & Honest Verdict
+              </h1>
+              <p className="text-xl md:text-2xl mb-4 text-white/90">
+                30-Day Deep Dive Into Phone Calling, Super Agent & Research Capabilities
+              </p>
+              <div className="flex items-center justify-center gap-4 text-sm text-white/80">
+                <span>By Michael Anderson</span>
+                <span>•</span>
+                <span>Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+              </div>
+            </div>
+
+            {/* Rating Stats Box */}
+            <div className="bg-gradient-to-br from-blue-400 to-teal-400 text-gray-900 rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div className="flex flex-col items-center">
+                  <Star className="w-8 h-8 mb-2 text-yellow-600" />
+                  <div className="text-4xl md:text-5xl font-bold mb-2">7.3/10</div>
+                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Overall Rating</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Clock className="w-8 h-8 mb-2 text-blue-900" />
+                  <div className="text-4xl md:text-5xl font-bold mb-2">30</div>
+                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Days Tested</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Phone className="w-8 h-8 mb-2 text-green-700" />
+                  <div className="text-4xl md:text-5xl font-bold mb-2">83%</div>
+                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Phone Success</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <CheckCircle className="w-8 h-8 mb-2 text-purple-700" />
+                  <div className="text-4xl md:text-5xl font-bold mb-2">87%</div>
+                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Research Accuracy</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
+      </section>
+
+      {/* Special Free Tier Banner */}
+      <section className="bg-gradient-to-r from-green-500 to-emerald-600 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center text-white text-center md:text-left gap-4">
+            <div className="flex items-center">
+              <span className="text-3xl mr-3">🎁</span>
+              <div>
+                <p className="font-bold text-xl">Start Free - No Credit Card Required!</p>
+                <p className="text-sm opacity-90">200 daily credits • Test phone calling • Try Super Agent features</p>
+              </div>
+            </div>
+            <a href="https://genspark.ai?via=lloyd789" target="_blank" rel="noopener noreferrer">
+              <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-bold hover:bg-green-50 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                Try Genspark Free <Emoji>→</Emoji>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <div className="max-w-7xl mx-auto flex">
         {/* Sticky Sidebar */}

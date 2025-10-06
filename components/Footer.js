@@ -12,7 +12,6 @@ const Footer = () => {
             <h3 className="text-xl font-bold font-display text-primary mb-3">SpectrumAIReviews</h3>
             <p className="text-secondary-foreground text-sm mb-4">
               Expert AI tool reviews based on rigorous testing and real-world experience.
-              Trusted by 50,000+ professionals.
             </p>
             <div className="flex items-center gap-2 text-xs text-secondary-foreground">
               <span className="text-primary">✓</span>
@@ -116,8 +115,8 @@ const Footer = () => {
             </div>
             <div className="flex flex-col items-center">
               <div className="text-2xl mb-1">🏆</div>
-              <div className="text-xs font-semibold text-foreground">50,000+ Users</div>
-              <div className="text-xs text-secondary-foreground">Trusted Worldwide</div>
+              <div className="text-xs font-semibold text-foreground">Editorial Excellence</div>
+              <div className="text-xs text-secondary-foreground">Award-Winning Reviews</div>
             </div>
           </div>
         </div>

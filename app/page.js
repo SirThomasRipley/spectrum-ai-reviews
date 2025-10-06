@@ -760,7 +760,7 @@ export default function HomePage() {
             Find Your Perfect AI Tool Today
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join 50,000+ professionals who rely on our expert reviews to choose the best AI software
+            Discover expert AI tool reviews to choose the best software for your needs
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link

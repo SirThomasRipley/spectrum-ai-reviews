@@ -483,6 +483,15 @@ export function getAllReviews() {
 }
 
 /**
+ * Get all reviews for a specific service (across all categories)
+ */
+export function getReviewsByService(serviceSlug) {
+  return reviews
+    .filter(review => review.service === serviceSlug)
+    .sort((a, b) => b.rating - a.rating); // Sort by rating, highest first
+}
+
+/**
  * Get reviews count for a service/category combination
  */
 export function getReviewCount(serviceSlug, categorySlug) {

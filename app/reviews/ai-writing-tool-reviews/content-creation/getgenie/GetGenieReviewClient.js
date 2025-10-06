@@ -133,6 +133,21 @@ const GetGenieReview = () => {
                 </div>
               </div>
             </div>
+
+            {/* CTA Button */}
+            <div className="text-center mt-8">
+              <a
+                href="https://getgenie.ai?rui=3623"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-3 bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-2xl hover:shadow-xl transform hover:scale-105"
+              >
+                <Zap className="w-6 h-6" />
+                Try GetGenie Free - Start Creating SEO Content
+                <ExternalLink className="w-5 h-5" />
+              </a>
+              <p className="text-white/90 text-sm mt-3">1,500 free words/month • No credit card required</p>
+            </div>
           </div>
         </div>
       </section>
@@ -999,7 +1014,7 @@ const GetGenieReview = () => {
                         <span className="text-sm bg-green-100 text-green-800 px-2 py-1 rounded-full">Recommended</span>
                       </div>
                       <p className="text-sm text-gray-600 mb-3">Direct purchase with full support and updates</p>
-                      <a href="https://getgenie.ai/" className="text-blue-600 hover:text-blue-800 text-sm font-semibold" target="_blank" rel="noopener noreferrer sponsored">Visit GetGenie.ai <ExternalLink className="inline w-3 h-3" /></a>
+                      <a href="https://getgenie.ai?rui=3623" className="text-blue-600 hover:text-blue-800 text-sm font-semibold" target="_blank" rel="noopener noreferrer sponsored">Visit GetGenie.ai <ExternalLink className="inline w-3 h-3" /></a>
                     </div>
                     <div className="border border-gray-200 rounded-lg p-4">
                       <div className="flex justify-between items-center mb-2">
@@ -1109,6 +1124,27 @@ const GetGenieReview = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Final Verdict CTA */}
+              <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-center text-white">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your WordPress Content Strategy?</h3>
+                <p className="text-lg mb-6 text-white/90">
+                  Start with the free plan (1,500 words/month) and experience GetGenie&apos;s SEO-focused AI writing for yourself.
+                </p>
+                <a
+                  href="https://getgenie.ai?rui=3623"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-flex items-center gap-3 bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-2xl hover:shadow-xl transform hover:scale-105"
+                >
+                  <Zap className="w-6 h-6" />
+                  Get GetGenie Free Now
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+                <p className="text-white/80 text-sm mt-4">
+                  ✓ No credit card required  •  ✓ Full feature access  •  ✓ Upgrade anytime
+                </p>
               </div>
             </section>
 

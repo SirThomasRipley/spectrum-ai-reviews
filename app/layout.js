@@ -138,14 +138,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link 
-          rel="preconnect" 
-          href="https://fonts.googleapis.com" 
+        {/* Preconnect to critical domains for Core Web Vitals */}
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
         />
-        <link 
-          rel="preconnect" 
-          href="https://fonts.gstatic.com" 
-          crossOrigin="anonymous" 
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://www.googletagmanager.com"
         />
         <Script
           id="organization-schema"

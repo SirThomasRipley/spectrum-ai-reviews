@@ -59,10 +59,10 @@ export default function AboutPage() {
 
           <div className="bg-white p-6 rounded-lg shadow-sm border">
             <div className="text-4xl mb-3">🎯</div>
-            <h3 className="font-bold text-lg mb-2">Industry Expertise</h3>
+            <h3 className="font-bold text-lg mb-2">Practical Expertise</h3>
             <p className="text-gray-700">
-              Our review team consists of professionals with 8+ years of experience in digital marketing,
-              content creation, and AI technology implementation.
+              Our review team brings practical experience in digital marketing,
+              content creation, and AI technology implementation across various use cases and industries.
             </p>
           </div>
 
@@ -92,36 +92,32 @@ export default function AboutPage() {
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-xl text-gray-900">Michael Anderson</h3>
-                <p className="text-primary font-semibold mb-2">Senior Digital Marketing Specialist & Lead AI Tool Reviewer</p>
+                <p className="text-primary font-semibold mb-2">Lead Reviewer & Content Strategist</p>
 
                 <div className="mb-3">
-                  <h4 className="font-semibold text-gray-900 mb-1">Credentials & Experience:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">Experience & Testing Approach:</h4>
                   <ul className="space-y-1 text-sm text-gray-700">
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <div>8+ years of professional experience in digital marketing and AI content creation</div>
+                      <div>Extensive hands-on testing of AI tools across multiple categories</div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <div>Tested and evaluated 50+ AI tools across multiple categories since 2021</div>
+                      <div>Focus on real-world use cases and practical applications</div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <div>Implemented AI content strategies for Fortune 500 brands and startups</div>
+                      <div>Minimum 30-day testing period for each reviewed tool</div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <div>Certified Digital Marketing Professional (CDMP)</div>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <div>Bachelor&apos;s in Computer Science with focus on AI/ML applications</div>
+                      <div>Data-driven analysis with quantified results and metrics</div>
                     </li>
                   </ul>
                 </div>
 
                 <div className="mb-3">
-                  <h4 className="font-semibold text-gray-900 mb-1">Specializations:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">Review Focus Areas:</h4>
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-white px-3 py-1 rounded-full text-xs border border-primary text-primary">AI Video Generators</span>
                     <span className="bg-white px-3 py-1 rounded-full text-xs border border-primary text-primary">Content Creation Tools</span>
@@ -132,27 +128,40 @@ export default function AboutPage() {
 
                 <p className="text-sm text-gray-700 italic">
                   &quot;My goal is to cut through the marketing hype and provide honest, practical insights based on
-                  extensive hands-on experience. Every review I write comes from weeks of real-world testing.&quot;
+                  extensive hands-on testing. Every review comes from weeks of real-world usage and documented results.&quot;
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Contributing Experts */}
+          {/* Team Approach */}
           <div className="bg-white rounded-lg p-6 border">
-            <h3 className="font-bold text-lg mb-4">Contributing Experts & Advisors</h3>
+            <h3 className="font-bold text-lg mb-4">Our Collaborative Approach</h3>
+            <p className="text-gray-700 mb-4">
+              SpectrumAIReviews is supported by a team of researchers, writers, and testers who contribute to our review process.
+              We work collaboratively to ensure comprehensive coverage of each tool&apos;s features, use cases, and performance.
+            </p>
             <div className="space-y-3 text-gray-700">
-              <div>
-                <strong className="text-gray-900">Dr. Sarah Chen, Ph.D.</strong> - AI Research Advisor
-                <p className="text-sm">Former AI researcher at Stanford, specializing in machine learning models and natural language processing.</p>
+              <div className="flex items-start">
+                <span className="text-primary mr-2 mt-1">✓</span>
+                <div>
+                  <strong className="text-gray-900">Research Team:</strong> Conducts market analysis, competitive research,
+                  and feature comparisons to provide context for each review.
+                </div>
               </div>
-              <div>
-                <strong className="text-gray-900">James Rodriguez</strong> - SEO & Marketing Strategy Consultant
-                <p className="text-sm">15+ years in digital marketing, former Head of SEO at major tech companies.</p>
+              <div className="flex items-start">
+                <span className="text-primary mr-2 mt-1">✓</span>
+                <div>
+                  <strong className="text-gray-900">Testing Team:</strong> Performs hands-on testing across multiple use cases,
+                  documenting performance metrics and real-world results.
+                </div>
               </div>
-              <div>
-                <strong className="text-gray-900">Emily Thompson</strong> - Creative Tools Specialist
-                <p className="text-sm">Professional graphic designer and content creator with expertise in AI art generation and visual design tools.</p>
+              <div className="flex items-start">
+                <span className="text-primary mr-2 mt-1">✓</span>
+                <div>
+                  <strong className="text-gray-900">Editorial Team:</strong> Ensures accuracy, clarity, and consistency across
+                  all published reviews while maintaining editorial independence.
+                </div>
               </div>
             </div>
           </div>

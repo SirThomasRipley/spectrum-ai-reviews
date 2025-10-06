@@ -273,6 +273,36 @@ export default function HomePage() {
           </header>
         </section>
 
+        {/* Category Quick Access Pills */}
+        <div className="container mx-auto px-6 py-8 -mt-8">
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Link
+              href="/ai-writing-tool-reviews"
+              className="px-6 py-3 bg-white/60 backdrop-blur-md rounded-full border border-white/40 hover:border-primary hover:shadow-lg hover:scale-105 transition-all font-medium text-sm"
+            >
+              📝 Writing Tools
+            </Link>
+            <Link
+              href="/ai-art-generator-reviews"
+              className="px-6 py-3 bg-white/60 backdrop-blur-md rounded-full border border-white/40 hover:border-primary hover:shadow-lg hover:scale-105 transition-all font-medium text-sm"
+            >
+              🎨 Art Generators
+            </Link>
+            <Link
+              href="/ai-seo-tool-reviews"
+              className="px-6 py-3 bg-white/60 backdrop-blur-md rounded-full border border-white/40 hover:border-primary hover:shadow-lg hover:scale-105 transition-all font-medium text-sm"
+            >
+              🔍 SEO Tools
+            </Link>
+            <Link
+              href="/ai-assistant-agent-reviews"
+              className="px-6 py-3 bg-white/60 backdrop-blur-md rounded-full border border-white/40 hover:border-primary hover:shadow-lg hover:scale-105 transition-all font-medium text-sm"
+            >
+              🤖 AI Assistants
+            </Link>
+          </div>
+        </div>
+
         {/* Featured Review Section - Zebracat */}
         <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-blue-50 rounded-3xl mb-20 relative overflow-hidden hover:shadow-2xl transition-shadow duration-500">
           {/* Decorative Elements */}
@@ -733,7 +763,7 @@ export default function HomePage() {
         {/* SEO Content Section */}
         <section className="py-16">
           <article className="prose max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
               Your Complete Guide to AI Tool Reviews in 2025
             </h2>
 
@@ -743,7 +773,10 @@ export default function HomePage() {
               for your specific needs has become increasingly challenging. That&apos;s where SpectrumAIReviews comes in.
             </p>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">
+            {/* Gradient Separator */}
+            <div className="my-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+
+            <h3 className="text-3xl font-bold mt-8 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
               How We Review AI Software
             </h3>
 
@@ -761,7 +794,10 @@ export default function HomePage() {
               <li><strong>Integration Capabilities:</strong> Compatibility with existing workflows</li>
             </ul>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">
+            {/* Gradient Separator */}
+            <div className="my-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+
+            <h3 className="text-3xl font-bold mt-8 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
               Best AI Tools by Category in 2025
             </h3>
 
@@ -769,51 +805,62 @@ export default function HomePage() {
               Our expert reviewers have identified the <strong>best AI software</strong> across key categories:
             </p>
 
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h4 className="font-bold mb-3"><Emoji label="clapper board">🎬</Emoji> AI Video Generation</h4>
-              <p className="mb-2">
+            <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all mb-6">
+              <h4 className="font-bold text-xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                <Emoji label="clapper board">🎬</Emoji> AI Video Generation
+              </h4>
+              <p className="mb-2 text-gray-700 leading-relaxed">
                 Leading the pack is <strong>Zebracat AI</strong>, our top-rated video generation tool.
                 With its intuitive text-to-video capabilities and professional-quality output, it&apos;s
                 revolutionizing content creation for marketers and creators alike.
               </p>
-              <Link href="/reviews/ai-art-generators/content-creation/zebracat" className="text-primary font-semibold hover:underline">
+              <Link href="/reviews/ai-art-generators/content-creation/zebracat" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
                 Read our complete Zebracat review <Emoji label="arrow right">→</Emoji>
               </Link>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h4 className="font-bold mb-3"><Emoji label="robot">🤖</Emoji> AI Assistants & Agents</h4>
-              <p className="mb-2">
+            <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all mb-6">
+              <h4 className="font-bold text-xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+                <Emoji label="robot">🤖</Emoji> AI Assistants & Agents
+              </h4>
+              <p className="mb-2 text-gray-700 leading-relaxed">
                 <strong>Genspark AI</strong> is breaking new ground as the first AI agent that makes real phone calls.
                 From restaurant reservations to customer service inquiries, it handles real-world tasks that bridge
                 the digital and physical worlds. Perfect for small businesses and busy professionals.
               </p>
-              <Link href="/reviews/ai-assistants/productivity/genspark" className="text-primary font-semibold hover:underline">
+              <Link href="/reviews/ai-assistants/productivity/genspark" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
                 Read our complete Genspark AI review <Emoji label="arrow right">→</Emoji>
               </Link>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h4 className="font-bold mb-3"><Emoji label="writing hand">✍️</Emoji> AI Writing Tools</h4>
-              <p className="mb-2">
+            <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all mb-6">
+              <h4 className="font-bold text-xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600">
+                <Emoji label="writing hand">✍️</Emoji> AI Writing Tools
+              </h4>
+              <p className="mb-2 text-gray-700 leading-relaxed">
                 <strong>GetGenie AI</strong> leads the pack for WordPress users seeking SEO-optimized content.
                 With native WordPress integration, SERP analysis, and 33+ language support, it&apos;s the ultimate
                 tool for content marketers. The $19/mo Writer Plan offers exceptional value with 50,000 words monthly.
               </p>
-              <Link href="/reviews/ai-writing-tool-reviews/content-creation/getgenie" className="text-primary font-semibold hover:underline">
+              <Link href="/reviews/ai-writing-tool-reviews/content-creation/getgenie" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
                 Read our complete GetGenie review <Emoji label="arrow right">→</Emoji>
               </Link>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h4 className="font-bold mb-3"><Emoji label="artist palette">🎨</Emoji> AI Art Generators</h4>
-              <p>
+            <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all mb-6">
+              <h4 className="font-bold text-xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-600">
+                <Emoji label="artist palette">🎨</Emoji> AI Art Generators
+              </h4>
+              <p className="text-gray-700 leading-relaxed">
                 Explore our in-depth reviews of Midjourney, DALL-E 3, Stable Diffusion, and emerging
                 AI art platforms that are redefining creative possibilities.
               </p>
             </div>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">
+            {/* Gradient Separator */}
+            <div className="my-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+
+            <h3 className="text-3xl font-bold mt-8 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
               Making Informed Decisions About AI Tools
             </h3>
 
@@ -838,7 +885,10 @@ export default function HomePage() {
               </p>
             </div>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">
+            {/* Gradient Separator */}
+            <div className="my-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+
+            <h3 className="text-3xl font-bold mt-8 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
               Stay Updated with AI Innovation
             </h3>
 

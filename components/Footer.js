@@ -3,35 +3,48 @@ import { services } from '../data/content';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 mt-24 py-12 border-t border-gray-200">
-      <div className="container mx-auto px-4">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <footer className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden mt-24">
+      {/* Gradient Top Border */}
+      <div className="h-1 bg-gradient-to-r from-primary via-accent to-blue-600"></div>
+
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary to-accent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        {/* Main Footer Content - Card-based Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* About Section */}
-          <div>
-            <h3 className="text-xl font-bold font-display text-primary mb-3">SpectrumAIReviews</h3>
-            <p className="text-secondary-foreground text-sm mb-4">
+          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-primary/50 transition-all">
+            <h3 className="text-xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+              SpectrumAIReviews
+            </h3>
+            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
               Expert AI tool reviews based on rigorous testing and real-world experience.
             </p>
-            <div className="flex items-center gap-2 text-xs text-secondary-foreground">
-              <span className="text-primary">✓</span>
-              <span>100% Editorial Independence</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-secondary-foreground mt-1">
-              <span className="text-primary">✓</span>
-              <span>Hands-On Testing Since 2021</span>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-xs text-gray-300">
+                <span className="text-primary">✓</span>
+                <span>100% Editorial Independence</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-gray-300">
+                <span className="text-primary">✓</span>
+                <span>Hands-On Testing Since 2021</span>
+              </div>
             </div>
           </div>
 
           {/* Review Categories */}
-          <div>
-            <h4 className="font-bold text-lg text-foreground mb-4">Review Categories</h4>
+          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-primary/50 transition-all">
+            <h4 className="font-bold text-lg mb-4">Review Categories</h4>
             <ul className="space-y-2">
               {services.map(service => (
                 <li key={service.id}>
                   <Link
                     href={`/${service.slug}`}
-                    className="text-secondary-foreground hover:text-primary transition-colors text-sm"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {service.name}
                   </Link>
@@ -41,26 +54,26 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div>
-            <h4 className="font-bold text-lg text-foreground mb-4">Company</h4>
+          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-primary/50 transition-all">
+            <h4 className="font-bold text-lg mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-secondary-foreground hover:text-primary transition-colors text-sm">
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/methodology" className="text-secondary-foreground hover:text-primary transition-colors text-sm">
+                <Link href="/methodology" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Review Methodology
                 </Link>
               </li>
               <li>
-                <Link href="/about#contact" className="text-secondary-foreground hover:text-primary transition-colors text-sm">
+                <Link href="/about#contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <a href="mailto:contact@spectrumaireviews.com" className="text-secondary-foreground hover:text-primary transition-colors text-sm">
+                <a href="mailto:contact@spectrumaireviews.com" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Editorial Team
                 </a>
               </li>
@@ -68,26 +81,26 @@ const Footer = () => {
           </div>
 
           {/* Legal & Trust */}
-          <div>
-            <h4 className="font-bold text-lg text-foreground mb-4">Legal & Trust</h4>
+          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-primary/50 transition-all">
+            <h4 className="font-bold text-lg mb-4">Legal & Trust</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy-policy" className="text-secondary-foreground hover:text-primary transition-colors text-sm">
+                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-service" className="text-secondary-foreground hover:text-primary transition-colors text-sm">
+                <Link href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/affiliate-disclosure" className="text-secondary-foreground hover:text-primary transition-colors text-sm">
+                <Link href="/affiliate-disclosure" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Affiliate Disclosure
                 </Link>
               </li>
               <li>
-                <a href="mailto:corrections@spectrumaireviews.com" className="text-secondary-foreground hover:text-primary transition-colors text-sm">
+                <a href="mailto:corrections@spectrumaireviews.com" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Report an Error
                 </a>
               </li>
@@ -95,36 +108,34 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Trust Signals Bar */}
-        <div className="border-t border-gray-300 pt-6 mb-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="flex flex-col items-center">
-              <div className="text-2xl mb-1">🔒</div>
-              <div className="text-xs font-semibold text-foreground">SSL Secured</div>
-              <div className="text-xs text-secondary-foreground">Privacy Protected</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-2xl mb-1">✍️</div>
-              <div className="text-xs font-semibold text-foreground">Expert Reviews</div>
-              <div className="text-xs text-secondary-foreground">8+ Years Experience</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-2xl mb-1">🔄</div>
-              <div className="text-xs font-semibold text-foreground">Updated Quarterly</div>
-              <div className="text-xs text-secondary-foreground">Fresh Content</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-2xl mb-1">🏆</div>
-              <div className="text-xs font-semibold text-foreground">Editorial Excellence</div>
-              <div className="text-xs text-secondary-foreground">Award-Winning Reviews</div>
-            </div>
+        {/* Trust Badges */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all">
+            <div className="text-4xl mb-2">🔒</div>
+            <div className="text-sm font-semibold">SSL Secured</div>
+            <div className="text-xs text-gray-400 mt-1">Privacy Protected</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all">
+            <div className="text-4xl mb-2">✍️</div>
+            <div className="text-sm font-semibold">Expert Reviews</div>
+            <div className="text-xs text-gray-400 mt-1">8+ Years Experience</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all">
+            <div className="text-4xl mb-2">🔄</div>
+            <div className="text-sm font-semibold">Updated Quarterly</div>
+            <div className="text-xs text-gray-400 mt-1">Fresh Content</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all">
+            <div className="text-4xl mb-2">🏆</div>
+            <div className="text-sm font-semibold">Editorial Excellence</div>
+            <div className="text-xs text-gray-400 mt-1">Award-Winning</div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-300 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-secondary-foreground text-center md:text-left">
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+            <div className="text-sm text-gray-400 text-center md:text-left">
               &copy; {new Date().getFullYear()} SpectrumAIReviews. All rights reserved.
               <span className="hidden md:inline"> | </span>
               <span className="block md:inline mt-1 md:mt-0">
@@ -136,7 +147,7 @@ const Footer = () => {
                 href="https://twitter.com/spectrumaireviews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-secondary-foreground hover:text-primary transition-colors"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Follow us on Twitter"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -147,7 +158,7 @@ const Footer = () => {
                 href="https://linkedin.com/company/spectrumaireviews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-secondary-foreground hover:text-primary transition-colors"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Follow us on LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -156,19 +167,19 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </div>
 
-        {/* Disclaimer */}
-        <div className="mt-6 pt-6 border-t border-gray-300">
-          <p className="text-xs text-secondary-foreground text-center max-w-4xl mx-auto leading-relaxed">
-            <strong>Disclosure:</strong> SpectrumAIReviews maintains editorial independence. While we may earn affiliate commissions
-            from some links on this site, our reviews are based solely on hands-on testing and expert analysis. We only recommend
-            products we have personally tested and believe offer genuine value. Our review methodology and scoring criteria remain
-            consistent regardless of affiliate relationships. For more information, see our{' '}
-            <Link href="/affiliate-disclosure" className="underline hover:text-primary">
-              Affiliate Disclosure Policy
-            </Link>.
-          </p>
+          {/* Disclaimer */}
+          <div className="pt-6 border-t border-white/10">
+            <p className="text-xs text-gray-400 text-center max-w-4xl mx-auto leading-relaxed">
+              <strong className="text-gray-300">Disclosure:</strong> SpectrumAIReviews maintains editorial independence. While we may earn affiliate commissions
+              from some links on this site, our reviews are based solely on hands-on testing and expert analysis. We only recommend
+              products we have personally tested and believe offer genuine value. Our review methodology and scoring criteria remain
+              consistent regardless of affiliate relationships. For more information, see our{' '}
+              <Link href="/affiliate-disclosure" className="underline hover:text-white transition-colors">
+                Affiliate Disclosure Policy
+              </Link>.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

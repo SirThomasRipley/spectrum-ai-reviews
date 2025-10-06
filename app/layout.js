@@ -1,6 +1,8 @@
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import StickyNav from './components/StickyNav';
+import FloatingActionButtons from './components/FloatingActionButtons';
 import Script from 'next/script';
 
 export const metadata = {
@@ -208,9 +210,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        <StickyNav />
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingActionButtons />
       </body>
     </html>
   );

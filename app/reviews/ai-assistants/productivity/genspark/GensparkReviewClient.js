@@ -187,10 +187,10 @@ const GensparkAIReview = () => {
                 <TrendingUp className="w-8 h-8" />
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Genspark AI Review 2025: Complete Analysis & Honest Verdict
+                Genspark AI Review 2025: AI Agent Phone Calls & Workspace
               </h1>
               <p className="text-xl md:text-2xl mb-4 text-white/90">
-                30-Day Deep Dive Into Phone Calling, Super Agent & Research Capabilities
+                Agentic AI Engine Testing: Super Agent Phone Calls, All-in-One AI Workspace & Credit Cost Analysis
               </p>
               <div className="flex items-center justify-center gap-4 text-sm text-white/80">
                 <span>By Michael Anderson</span>

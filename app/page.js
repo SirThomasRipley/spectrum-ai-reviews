@@ -56,6 +56,21 @@ export default function HomePage() {
           position: 1,
           item: {
             '@type': 'Review',
+            name: 'Cognitia AI Review 2025',
+            url: 'https://spectrumaireviews.com/reviews/ai-assistants/productivity/cognitia',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '4.55',
+              bestRating: '5',
+              worstRating: '1'
+            }
+          }
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          item: {
+            '@type': 'Review',
             name: 'Zebracat AI Review 2025',
             url: 'https://spectrumaireviews.com/reviews/ai-art-generators/content-creation/zebracat',
             reviewRating: {
@@ -68,7 +83,7 @@ export default function HomePage() {
         },
         {
           '@type': 'ListItem',
-          position: 2,
+          position: 3,
           item: {
             '@type': 'Review',
             name: 'Genspark AI Review 2025',
@@ -83,15 +98,15 @@ export default function HomePage() {
         },
         {
           '@type': 'ListItem',
-          position: 3,
+          position: 4,
           item: {
             '@type': 'Review',
             name: 'GetGenie AI Review 2025',
             url: 'https://spectrumaireviews.com/reviews/ai-writing-tool-reviews/content-creation/getgenie',
             reviewRating: {
               '@type': 'Rating',
-              ratingValue: '8.5',
-              bestRating: '10',
+              ratingValue: '4.25',
+              bestRating: '5',
               worstRating: '1'
             }
           }
@@ -101,6 +116,32 @@ export default function HomePage() {
   };
 
   const featuredReviewJsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      itemReviewed: {
+        '@type': 'SoftwareApplication',
+        name: 'Cognitia AI',
+        applicationCategory: 'AI Assistant with Persistent Memory',
+        operatingSystem: 'Web, iOS, Android',
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Michael Anderson',
+        jobTitle: 'AI Productivity Tools Specialist',
+      },
+      datePublished: '2025-01-15',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.55',
+        bestRating: '5',
+        worstRating: '1'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'SpectrumAIReviews'
+      }
+    },
     {
       '@context': 'https://schema.org',
       '@type': 'Review',
@@ -170,8 +211,8 @@ export default function HomePage() {
       datePublished: '2025-01-15',
       reviewRating: {
         '@type': 'Rating',
-        ratingValue: '8.5',
-        bestRating: '10',
+        ratingValue: '4.25',
+        bestRating: '5',
         worstRating: '1'
       },
       publisher: {
@@ -612,6 +653,108 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Featured Review Section - Cognitia AI */}
+        <section className="py-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50 rounded-3xl mb-20 relative overflow-hidden hover:shadow-2xl transition-shadow duration-500">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-indigo-200/30 to-purple-200/30 rounded-full blur-3xl"></div>
+
+          <div className="px-8 relative z-10">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-xs font-bold rounded-full shadow-lg animate-pulse-slow flex items-center gap-2">
+                <span className="text-base">🔥</span> FEATURED REVIEW
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full shadow-lg flex items-center gap-2">
+                <span className="text-base">⭐</span> EDITOR&apos;S CHOICE
+              </span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+              <Emoji label="brain">🧠</Emoji> Cognitia AI: Persistent Memory AI Assistant That Never Forgets
+            </h2>
+
+            <article className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+              <div className="grid md:grid-cols-2 gap-10">
+                <div>
+                  <h3 className="text-2xl font-bold mb-6 text-gray-800">Why Cognitia AI Stands Out</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-4 group">
+                      <span className="text-green-500 text-2xl group-hover:scale-125 transition-transform"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span className="text-gray-700"><strong className="text-gray-900">Persistent Memory:</strong> Only AI that remembers context across months of usage</span>
+                    </li>
+                    <li className="flex items-start gap-4 group">
+                      <span className="text-green-500 text-2xl group-hover:scale-125 transition-transform"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span className="text-gray-700"><strong className="text-gray-900">Deep Email Integration:</strong> Manages 500+ emails daily across multiple accounts</span>
+                    </li>
+                    <li className="flex items-start gap-4 group">
+                      <span className="text-green-500 text-2xl group-hover:scale-125 transition-transform"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span className="text-gray-700"><strong className="text-gray-900">Financial Intelligence:</strong> Bank-level security with Plaid integration</span>
+                    </li>
+                    <li className="flex items-start gap-4 group">
+                      <span className="text-green-500 text-2xl group-hover:scale-125 transition-transform"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span className="text-gray-700"><strong className="text-gray-900">Lightning-Fast:</strong> 2.3s average response time with 94% accuracy</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 border border-gray-200/50 shadow-inner">
+                    <div className="flex items-center justify-between mb-6">
+                      <h4 className="text-xl font-bold text-gray-800">Overall Rating</h4>
+                      <div className="flex text-yellow-400 text-2xl">
+                        <Emoji label="5 star rating">⭐⭐⭐⭐⭐</Emoji>
+                      </div>
+                    </div>
+                    <div className="space-y-5">
+                      <div>
+                        <div className="flex justify-between text-sm font-semibold mb-2 text-gray-700">
+                          <span>Innovation</span>
+                          <span className="text-primary">9.5/10</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
+                          <div className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full h-3 shadow-sm transition-all duration-1000" style={{width: '95%'}}></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm font-semibold mb-2 text-gray-700">
+                          <span>Performance</span>
+                          <span className="text-primary">9.0/10</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
+                          <div className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full h-3 shadow-sm transition-all duration-1000" style={{width: '90%'}}></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm font-semibold mb-2 text-gray-700">
+                          <span>Value</span>
+                          <span className="text-primary">8.5/10</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
+                          <div className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full h-3 shadow-sm transition-all duration-1000" style={{width: '85%'}}></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Link
+                      href="/reviews/ai-assistants/productivity/cognitia"
+                      className="group mt-8 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold py-4 px-8 rounded-xl hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105 transition-all duration-300"
+                    >
+                      Read Full Cognitia Review
+                      <span className="group-hover:translate-x-1 transition-transform"><Emoji label="arrow right">→</Emoji></span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border-l-4 border-purple-500 shadow-md">
+                <p className="text-sm leading-relaxed text-gray-700">
+                  <strong className="text-gray-900">Expert Verdict:</strong> &ldquo;After 60 days of testing with 500+ daily emails and complex financial workflows, Cognitia AI delivers on its promise of persistent memory with 87% context retention accuracy. The memory system alone revolutionizes AI assistance. Perfect for knowledge workers who value context and deep integrations over basic chat.&rdquo;
+                  - <em className="text-purple-600 font-semibold">Michael Anderson, AI Productivity Tools Specialist</em>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
         {/* Categories Section with Better SEO */}
         <section id="categories" className="py-24 relative">
           {/* Background Decoration */}
@@ -658,8 +801,8 @@ export default function HomePage() {
                       </div>
                     )}
                     {service.id === 'ai-assistants' && (
-                      <div className="mt-5 px-3 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xs font-bold rounded-lg inline-flex items-center gap-2 shadow-md animate-pulse-slow">
-                        <Emoji label="star">⭐</Emoji> Featured: Genspark AI
+                      <div className="mt-5 px-3 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-xs font-bold rounded-lg inline-flex items-center gap-2 shadow-md animate-pulse-slow">
+                        <Emoji label="star">⭐</Emoji> Featured: Cognitia AI
                       </div>
                     )}
                     {service.id === 'ai-writing-tools' && (
@@ -820,16 +963,14 @@ export default function HomePage() {
             </div>
 
             <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all mb-6">
-              <h4 className="font-bold text-xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-                <Emoji label="robot">🤖</Emoji> AI Assistants & Agents
+              <h4 className="font-bold text-xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                <Emoji label="brain">🧠</Emoji> AI Assistants & Agents
               </h4>
               <p className="mb-2 text-gray-700 leading-relaxed">
-                <strong>Genspark AI</strong> is breaking new ground as the first AI agent that makes real phone calls.
-                From restaurant reservations to customer service inquiries, it handles real-world tasks that bridge
-                the digital and physical worlds. Perfect for small businesses and busy professionals.
+                <strong>Cognitia AI</strong> revolutionizes AI assistance with persistent memory that never forgets. Unlike ChatGPT or Claude, Cognitia remembers your preferences, projects, and context across months of usage with 87% retention accuracy. Seamlessly integrates with Gmail, Outlook, and financial accounts through bank-level Plaid security. Perfect for knowledge workers managing 100+ emails daily, executives juggling multiple projects, and professionals who need AI that truly understands their workflow. The $83/mo Premium plan unlocks multi-agent orchestration and financial intelligence capabilities unmatched by competitors.
               </p>
-              <Link href="/reviews/ai-assistants/productivity/genspark" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
-                Read our complete Genspark AI review <Emoji label="arrow right">→</Emoji>
+              <Link href="/reviews/ai-assistants/productivity/cognitia" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
+                Read our complete Cognitia AI review <Emoji label="arrow right">→</Emoji>
               </Link>
             </div>
 

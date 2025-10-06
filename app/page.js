@@ -80,6 +80,21 @@ export default function HomePage() {
               worstRating: '1'
             }
           }
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          item: {
+            '@type': 'Review',
+            name: 'GetGenie AI Review 2025',
+            url: 'https://spectrumaireviews.com/reviews/ai-writing-tool-reviews/content-creation/getgenie',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '8.5',
+              bestRating: '10',
+              worstRating: '1'
+            }
+          }
         }
       ]
     }
@@ -131,6 +146,32 @@ export default function HomePage() {
         '@type': 'Rating',
         ratingValue: '4.0',
         bestRating: '5',
+        worstRating: '1'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'SpectrumAIReviews'
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      itemReviewed: {
+        '@type': 'SoftwareApplication',
+        name: 'GetGenie AI',
+        applicationCategory: 'AI Writing & SEO Software for WordPress',
+        operatingSystem: 'Web, WordPress Plugin',
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Michael Anderson',
+        jobTitle: 'AI Writing Tools Specialist',
+      },
+      datePublished: '2025-01-15',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '8.5',
+        bestRating: '10',
         worstRating: '1'
       },
       publisher: {
@@ -392,6 +433,100 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Featured Review Section - GetGenie AI */}
+        <section className="py-16 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl mb-20">
+          <div className="px-8">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">FEATURED REVIEW</span>
+              <span className="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">WORDPRESS EXCLUSIVE</span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <Emoji label="zap">⚡</Emoji> GetGenie AI: Best WordPress SEO Writing Tool
+            </h2>
+
+            <article className="bg-white rounded-lg p-8 shadow-lg">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Why GetGenie Stands Out</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 text-xl"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span><strong>WordPress Native Integration:</strong> Works directly in your WordPress editor</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 text-xl"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span><strong>SERP Analysis & Competitor Insights:</strong> Real-time SEO optimization</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 text-xl"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span><strong>33+ Languages:</strong> 94% quality score across multilingual content</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 text-xl"><Emoji label="checkmark">✔️</Emoji></span>
+                      <span><strong>WooCommerce Integration:</strong> AI product descriptions for e-commerce</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-lg font-bold">Overall Rating</h4>
+                      <div className="flex text-yellow-400 text-xl">
+                        <Emoji label="4 star rating">⭐⭐⭐⭐</Emoji>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>WordPress Integration</span>
+                          <span>9.0/10</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-2">
+                          <div className="bg-primary rounded-full h-2" style={{width: '90%'}}></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>SEO Features</span>
+                          <span>8.5/10</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-2">
+                          <div className="bg-primary rounded-full h-2" style={{width: '85%'}}></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>Value for Money</span>
+                          <span>8.0/10</span>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-2">
+                          <div className="bg-primary rounded-full h-2" style={{width: '80%'}}></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Link
+                      href="/reviews/ai-writing-tool-reviews/content-creation/getgenie"
+                      className="mt-6 block text-center bg-primary text-primary-foreground font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity"
+                    >
+                      Read Full GetGenie Review <Emoji label="arrow right">→</Emoji>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                <p className="text-sm">
+                  <strong>Expert Verdict:</strong> &ldquo;After 3 months of testing with 150+ articles across 33 languages, GetGenie delivers exceptional WordPress integration with 94% content quality. The $19/mo Writer Plan offers unbeatable value for WordPress users. Perfect for SEO-focused content creators and WooCommerce store owners.&rdquo;
+                  - <em>Michael Anderson, AI Writing Tools Specialist</em>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
         {/* Categories Section with Better SEO */}
         <section id="categories" className="py-20">
           <header>
@@ -431,6 +566,11 @@ export default function HomePage() {
                   {service.id === 'ai-assistants' && (
                     <div className="mt-4 text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded inline-block">
                       <Emoji label="star">⭐</Emoji> Featured: Genspark AI Review
+                    </div>
+                  )}
+                  {service.id === 'ai-writing-tools' && (
+                    <div className="mt-4 text-xs bg-green-100 text-green-700 px-2 py-1 rounded inline-block">
+                      <Emoji label="star">⭐</Emoji> Featured: GetGenie Review
                     </div>
                   )}
                 </Link>
@@ -535,11 +675,27 @@ export default function HomePage() {
             </div>
 
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h4 className="font-bold mb-3"><Emoji label="writing hand">✍️</Emoji> AI Writing Tools</h4>
-              <p>
-                From blog posts to marketing copy, AI writing assistants are transforming content creation.
-                Our reviews cover the latest GPT-4 powered tools and specialized writing software.
+              <h4 className="font-bold mb-3"><Emoji label="robot">🤖</Emoji> AI Assistants & Agents</h4>
+              <p className="mb-2">
+                <strong>Genspark AI</strong> is breaking new ground as the first AI agent that makes real phone calls.
+                From restaurant reservations to customer service inquiries, it handles real-world tasks that bridge
+                the digital and physical worlds. Perfect for small businesses and busy professionals.
               </p>
+              <Link href="/reviews/ai-assistants/productivity/genspark" className="text-primary font-semibold hover:underline">
+                Read our complete Genspark AI review <Emoji label="arrow right">→</Emoji>
+              </Link>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <h4 className="font-bold mb-3"><Emoji label="writing hand">✍️</Emoji> AI Writing Tools</h4>
+              <p className="mb-2">
+                <strong>GetGenie AI</strong> leads the pack for WordPress users seeking SEO-optimized content.
+                With native WordPress integration, SERP analysis, and 33+ language support, it&apos;s the ultimate
+                tool for content marketers. The $19/mo Writer Plan offers exceptional value with 50,000 words monthly.
+              </p>
+              <Link href="/reviews/ai-writing-tool-reviews/content-creation/getgenie" className="text-primary font-semibold hover:underline">
+                Read our complete GetGenie review <Emoji label="arrow right">→</Emoji>
+              </Link>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-6 mb-6">

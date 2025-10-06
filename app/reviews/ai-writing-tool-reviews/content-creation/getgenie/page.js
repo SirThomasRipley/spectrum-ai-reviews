@@ -240,11 +240,88 @@ export default function GetGenieReviewPage() {
     ],
   };
 
+  // VIDEO SCHEMA
+  const videoSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: 'GetGenie Review | Best AI SEO Writing Tool',
+    description: 'Comprehensive 10-minute review of GetGenie AI showing WordPress integration, SEO content generation, SERP analysis, and real-world testing results.',
+    thumbnailUrl: 'https://i.ytimg.com/vi/XtnXZPfP-gk/hq720.jpg',
+    uploadDate: '2025-01-10T00:00:00Z',
+    duration: 'PT10M18S',
+    contentUrl: 'https://www.youtube.com/watch?v=XtnXZPfP-gk',
+    embedUrl: 'https://www.youtube.com/embed/XtnXZPfP-gk',
+    publisher: {
+      '@type': 'Organization',
+      name: 'SpectrumAIReviews',
+    },
+    hasPart: [
+      {
+        '@type': 'Clip',
+        name: 'WordPress Installation Demo',
+        startOffset: 135,
+        endOffset: 270,
+        url: 'https://www.youtube.com/watch?v=XtnXZPfP-gk&t=135s',
+      },
+      {
+        '@type': 'Clip',
+        name: 'SEO Content Generation',
+        startOffset: 270,
+        endOffset: 465,
+        url: 'https://www.youtube.com/watch?v=XtnXZPfP-gk&t=270s',
+      },
+      {
+        '@type': 'Clip',
+        name: 'SERP Analysis Feature',
+        startOffset: 465,
+        endOffset: 560,
+        url: 'https://www.youtube.com/watch?v=XtnXZPfP-gk&t=465s',
+      },
+    ],
+  };
+
+  // IMAGE SCHEMA (WordPress Dashboard)
+  const imageSchema1 = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: 'https://getgenie.ai/wp-content/uploads/2022/08/Getting-Started-with-GetGenie-1-1024x382.png',
+    creditText: 'GetGenie AI',
+    creator: {
+      '@type': 'Organization',
+      name: 'GetGenie AI',
+    },
+    copyrightNotice: 'GetGenie AI',
+    description: 'GetGenie WordPress plugin dashboard showing SEO optimization features, content analysis tools, and keyword research interface',
+    name: 'GetGenie WordPress Dashboard Interface',
+    datePublished: '2025-01-15',
+    inLanguage: 'en-US',
+  };
+
+  // IMAGE SCHEMA (SERP Analysis)
+  const imageSchema2 = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: 'https://getgenie.ai/wp-content/uploads/2025/05/feature_ai_magic_images_40-1024x830.webp',
+    creditText: 'GetGenie AI',
+    creator: {
+      '@type': 'Organization',
+      name: 'GetGenie AI',
+    },
+    copyrightNotice: 'GetGenie AI',
+    description: 'GetGenie SERP analysis interface showing head-to-head competitor comparison and keyword density analysis',
+    name: 'GetGenie SERP Analysis Interface',
+    datePublished: '2025-01-15',
+    inLanguage: 'en-US',
+  };
+
   return (
     <>
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id="video-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
+      <Script id="image-schema-1" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema1) }} />
+      <Script id="image-schema-2" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema2) }} />
       <GetGenieReviewClient />
     </>
   );

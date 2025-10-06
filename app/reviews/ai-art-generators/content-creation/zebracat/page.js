@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 export const metadata = {
   title: 'Zebracat Review 2025: Transform Text to Video in Minutes - Honest Analysis',
-  description: 'In-depth Zebracat review after creating 127 AI videos over 3 months. Expert analysis of features, pricing ($0-$175/mo), quality, and value. Rating: 4.2/5. Get 15% OFF with code BLSNUMRG.',
+  description: 'Zebracat review: 127 AI videos tested over 3 months. Features, pricing ($0-$175/mo), quality analysis. 4.2/5 stars. 15% OFF code: BLSNUMRG',
   keywords: 'Zebracat review, Zebracat AI review 2025, text to video AI, AI video generator review, Zebracat pricing, Zebracat vs InVideo, Zebracat vs Pictory, AI video maker, automated video creation, Zebracat discount code, Zebracat alternatives',
   authors: [{ name: 'Michael Anderson', url: 'https://spectrumaireviews.com/about' }],
   openGraph: {
@@ -169,7 +169,7 @@ export default function ZebracatReviewPage() {
         '@type': 'ListItem',
         position: 4,
         name: 'Zebracat Review',
-        item: 'https://spectrumaireviews.com/reviews/ai-art-generator-reviews/content-creation/zebracat',
+        item: 'https://spectrumaireviews.com/reviews/ai-art-generators/content-creation/zebracat',
       },
     ],
   };

@@ -3,12 +3,12 @@ import Script from 'next/script';
 
 export const metadata = {
   title: 'Genspark AI Review 2025: Complete Analysis & Honest Verdict',
-  description: 'In-depth Genspark AI review after 30 days of testing. Expert analysis of phone calling, Super Agent, Sparkpages, and pricing ($24.99/mo). Rating: 7.3/10. Read our honest verdict.',
+  description: 'In-depth Genspark AI review after 30 days of testing. Expert analysis of phone calling, Super Agent, Sparkpages, pricing ($24.99/mo). 3.7/5 stars. Honest verdict.',
   keywords: 'Genspark AI review, Genspark review 2025, AI assistant review, AI phone calling, Super Agent AI, Sparkpages review, Genspark pricing, AI research tool, Genspark vs ChatGPT, Genspark vs Perplexity',
   authors: [{ name: 'Michael Anderson', url: 'https://spectrumaireviews.com/about' }],
   openGraph: {
     title: 'Genspark AI Review 2025: Does It Really Work? Honest Analysis',
-    description: 'After 30 days of testing Genspark AI, here is our honest verdict on phone calling (83% success rate), research quality, and real pricing. 7.3/10 rating.',
+    description: 'After 30 days of testing Genspark AI, here is our honest verdict on phone calling (83% success rate), research quality, and real pricing. 3.7/5 stars.',
     url: 'https://spectrumaireviews.com/reviews/ai-assistants/productivity/genspark',
     siteName: 'SpectrumAIReviews',
     locale: 'en_US',
@@ -87,8 +87,8 @@ export default function GensparkReviewPage() {
       },
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '7.3',
-        bestRating: '10',
+        ratingValue: '3.7',
+        bestRating: '5',
         worstRating: '1',
         ratingCount: '1',
       },
@@ -101,8 +101,8 @@ export default function GensparkReviewPage() {
     },
     reviewRating: {
       '@type': 'Rating',
-      ratingValue: '7.3',
-      bestRating: '10',
+      ratingValue: '3.7',
+      bestRating: '5',
       worstRating: '1',
     },
     datePublished: '2025-01-15',
@@ -110,7 +110,7 @@ export default function GensparkReviewPage() {
     description:
       'Comprehensive review of Genspark AI after 30 days of daily testing. Honest analysis of phone calling features, Super Agent capabilities, research quality, pricing, and real-world performance.',
     reviewBody:
-      'After 30 days of testing Genspark AI, it delivers genuinely innovative features particularly the phone calling capability (83% success rate) and comprehensive research synthesis. However, reliability issues and opaque billing practices prevent it from being a wholehearted recommendation. Rating: 7.3/10.',
+      'After 30 days of testing Genspark AI, it delivers genuinely innovative features particularly the phone calling capability (83% success rate) and comprehensive research synthesis. However, reliability issues and opaque billing practices prevent it from being a wholehearted recommendation. Rating: 3.7/5 stars.',
     positiveNotes: {
       '@type': 'ItemList',
       itemListElement: [
@@ -191,7 +191,7 @@ export default function GensparkReviewPage() {
         name: 'Is Genspark AI worth it?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Genspark AI is worth it for small business owners, content creators, and professionals who need phone assistance and can tolerate occasional failures with backup plans. Rating: 7.3/10. Not recommended for enterprise teams or mission-critical applications.',
+          text: 'Genspark AI is worth it for small business owners, content creators, and professionals who need phone assistance and can tolerate occasional failures with backup plans. Rating: 3.7/5 stars. Not recommended for enterprise teams or mission-critical applications.',
         },
       },
       {

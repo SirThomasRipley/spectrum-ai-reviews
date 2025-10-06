@@ -4,14 +4,14 @@ import Script from 'next/script';
 export const metadata = {
   // PRIMARY METADATA
   title: 'GetGenie Review 2025: Best WordPress AI Writing Tool for SEO?',
-  description: 'In-depth GetGenie review after 3 months of testing. Expert analysis of WordPress integration, SEO features, pricing ($19-49/mo), multilingual content (33+ languages), and Genie Image. Rating: 8.5/10. Free plan available.',
+  description: 'In-depth GetGenie review after 3 months of testing. WordPress integration, SEO features, pricing ($19-49/mo), multilingual support (33+ languages), Genie Image. 4.3/5 stars. Free plan.',
   keywords: 'GetGenie review, GetGenie AI review 2025, WordPress AI writing tool, GetGenie WordPress plugin, AI SEO writing tool, GetGenie pricing, GetGenie vs Jasper, Genie Image review, WordPress content generator, WooCommerce AI, GetGenie free plan, multilingual AI writing',
   authors: [{ name: 'Michael Anderson', url: 'https://spectrumaireviews.com/about' }],
 
   // OPENGRAPH
   openGraph: {
     title: 'GetGenie Review 2025: I Tested This WordPress AI Tool for 3 Months - Here&apos;s What Happened',
-    description: 'After generating 150+ SEO-optimized articles with GetGenie across 33 languages, here&apos;s my honest verdict on features, pricing, and real value. 8.5/10 rating. Includes Genie Image analysis and WooCommerce Wizard testing.',
+    description: 'After generating 150+ SEO-optimized articles with GetGenie across 33 languages, here&apos;s my honest verdict on features, pricing, and value. 4.3/5 stars. Genie Image & WooCommerce Wizard analysis.',
     url: 'https://spectrumaireviews.com/reviews/ai-writing-tool-reviews/content-creation/getgenie',
     siteName: 'SpectrumAIReviews',
     locale: 'en_US',
@@ -94,8 +94,8 @@ export default function GetGenieReviewPage() {
       },
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '8.5',
-        bestRating: '10',
+        ratingValue: '4.3',
+        bestRating: '5',
         worstRating: '1',
         ratingCount: '1',
       },
@@ -108,14 +108,14 @@ export default function GetGenieReviewPage() {
     },
     reviewRating: {
       '@type': 'Rating',
-      ratingValue: '8.5',
-      bestRating: '10',
+      ratingValue: '4.3',
+      bestRating: '5',
       worstRating: '1',
     },
     datePublished: '2025-01-15',
     dateModified: new Date().toISOString().split('T')[0],
     description: 'Comprehensive review of GetGenie AI after 3 months of testing. Analysis of WordPress integration, SEO features, multilingual content generation, Genie Image, WooCommerce Wizard, pricing plans, and competitive positioning.',
-    reviewBody: 'After 3 months of intensive testing with GetGenie AI, generating 150+ SEO-optimized articles across 33 languages and 5 client websites, it delivers exceptional WordPress integration with 94% content quality score. The Writer Plan ($19/mo) offers best value with 50,000 words, SERP analysis, and competitor insights. Rating: 8.5/10.',
+    reviewBody: 'After 3 months of intensive testing with GetGenie AI, generating 150+ SEO-optimized articles across 33 languages and 5 client websites, it delivers exceptional WordPress integration with 94% content quality score. The Writer Plan ($19/mo) offers best value with 50,000 words, SERP analysis, and competitor insights. Rating: 4.3/5 stars.',
     positiveNotes: {
       '@type': 'ItemList',
       itemListElement: [
@@ -162,7 +162,7 @@ export default function GetGenieReviewPage() {
         name: 'Is GetGenie worth it and does it really work for SEO content?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, GetGenie is worth it for WordPress users focused on SEO content. After 3 months of testing with 150+ articles, it achieved a 94% content quality score and 8.5/10 overall rating. The WordPress integration, SERP analysis, and NLP keyword optimization deliver measurable SEO improvements. Best value: Writer Plan at $19/month for 50,000 words. Not recommended for non-WordPress users or creative writing.',
+          text: 'Yes, GetGenie is worth it for WordPress users focused on SEO content. After 3 months of testing with 150+ articles, it achieved a 94% content quality score and 4.3/5 stars overall rating. The WordPress integration, SERP analysis, and NLP keyword optimization deliver measurable SEO improvements. Best value: Writer Plan at $19/month for 50,000 words. Not recommended for non-WordPress users or creative writing.',
         },
       },
       {

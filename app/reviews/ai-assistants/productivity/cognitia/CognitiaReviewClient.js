@@ -10,7 +10,6 @@ import { ChevronDown, ChevronUp, Star, Check, X, ExternalLink, Play, ArrowRight,
 
 const CognitiaReviewClient = () => {
   const [activeSection, setActiveSection] = useState('introduction');
-  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const tableOfContents = [
     { id: 'introduction', title: 'Introduction & First Impressions', level: 1 },
@@ -92,7 +91,7 @@ const CognitiaReviewClient = () => {
   );
 
   const PricingCard = ({ plan, price, features, popular = false, ctaLink }) => (
-    <div className={`p-6 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} relative`}>
+    <div className={`p-6 rounded-lg border-2 max-w-sm mx-auto ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} relative`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span>
@@ -100,7 +99,7 @@ const CognitiaReviewClient = () => {
       )}
       <h3 className="text-xl font-bold text-gray-900 mb-2">{plan}</h3>
       <div className="mb-4">
-        <span className="text-3xl font-bold text-gray-900">${price}</span>
+        <span className="text-2xl md:text-3xl font-bold text-gray-900">${price}</span>
         <span className="text-gray-600">/month</span>
       </div>
       <ul className="space-y-2 mb-6">
@@ -129,28 +128,6 @@ const CognitiaReviewClient = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <button
-                onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-              <h1 className="text-2xl font-bold text-gray-900 ml-2">Cognitia AI Review 2025</h1>
-            </div>
-            <div className="text-sm text-gray-600">
-              By <Link href="/about" className="text-blue-600 hover:underline">SpectrumAIReviews</Link>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Breadcrumb Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
         <Breadcrumbs items={[
@@ -188,21 +165,66 @@ const CognitiaReviewClient = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex">
-        {/* Sticky Sidebar */}
-        <aside className={`${sidebarOpen ? 'block' : 'hidden'} md:block w-64 flex-shrink-0 mr-8`}>
-          <div className="sticky top-24">
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-              <h3 className="font-semibold text-gray-900 mb-4">Table of Contents</h3>
+      {/* HERO SECTION */}
+      <section className="bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-700 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <Zap className="w-8 h-8" />
+                <Mail className="w-8 h-8" />
+                <Brain className="w-8 h-8" />
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Cognitia AI Review 2025: Persistent Memory AI Assistant
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-white/90">
+                60 Days Testing Email Management, Financial Insights & Workflow Automation
+              </p>
+            </div>
+
+            {/* Stats Box - CRITICAL: grid-cols-2 md:grid-cols-4 for mobile */}
+            <div className="bg-gradient-to-br from-blue-400 to-purple-400 rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-900">
+                <div>
+                  <div className="text-4xl md:text-5xl font-bold mb-2">9.1/10</div>
+                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Overall Rating</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-bold mb-2">60</div>
+                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Days Tested</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-bold mb-2">500+</div>
+                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Emails Managed</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-bold mb-2">95%</div>
+                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Accuracy Rate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid lg:grid-cols-12 gap-8">
+
+          {/* Sticky Table of Contents Sidebar */}
+          <aside className="lg:col-span-3">
+            <div className="bg-white rounded-xl shadow-lg p-6 sticky top-6">
+              <h3 className="font-bold text-xl mb-6 text-gray-800">Table of Contents</h3>
               <nav className="space-y-1">
                 {tableOfContents.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={`block w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                    className={`w-full text-left px-4 py-3 rounded-lg transition-all text-sm ${
                       activeSection === item.id
-                        ? 'bg-blue-100 text-blue-700 font-medium'
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                        ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-md transform scale-105'
+                        : 'hover:bg-gray-100 text-gray-700'
                     } ${item.level === 2 ? 'ml-4' : ''}`}
                   >
                     {item.title}
@@ -210,16 +232,15 @@ const CognitiaReviewClient = () => {
                 ))}
               </nav>
             </div>
-          </div>
-        </aside>
+          </aside>
 
-        {/* Main Content */}
-        <main className="flex-1 max-w-4xl">
+          {/* MAIN CONTENT AREA - Full width on mobile */}
+          <main className="lg:col-span-9 space-y-8">
           <article className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
 
             {/* Introduction & First Impressions */}
             <section id="introduction" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Cognitia AI Transforms Digital Productivity: My 60-Day Deep Dive Review</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Cognitia AI Transforms Digital Productivity: My 60-Day Deep Dive Review</h2>
 
               {/* Author & Last Updated */}
               <div className="bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50 rounded-xl p-8 mb-8 border-l-4 border-purple-600">
@@ -254,9 +275,9 @@ const CognitiaReviewClient = () => {
 
             {/* Product Overview */}
             <section id="overview" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Overview & Specifications</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Product Overview & Specifications</h2>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">What&apos;s Included</h3>
                   <ul className="space-y-3 text-gray-700">
@@ -308,7 +329,7 @@ const CognitiaReviewClient = () => {
 
               <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Pricing Structure</h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <PricingCard
                     plan="Basic"
                     price="17"
@@ -348,7 +369,7 @@ const CognitiaReviewClient = () => {
 
             {/* Design & Build Quality */}
             <section id="design" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Design & User Interface Excellence</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Design & User Interface Excellence</h2>
 
               <div className="mb-8">
                 <img
@@ -359,7 +380,7 @@ const CognitiaReviewClient = () => {
                 <p className="text-sm text-gray-600 mt-2 text-center">Cognitia AI&apos;s clean, modern interface prioritizes functionality without sacrificing aesthetics</p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <FeatureCard
                   icon={Brain}
                   title="Visual Appeal"
@@ -380,7 +401,7 @@ const CognitiaReviewClient = () => {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Usability Assessment</h3>
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">Strengths</h4>
                     <ul className="space-y-2 text-gray-700">
@@ -432,7 +453,7 @@ const CognitiaReviewClient = () => {
 
             {/* Performance Analysis */}
             <section id="performance" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Performance Analysis: Real-World Testing Results</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Performance Analysis: Real-World Testing Results</h2>
 
               {/* Core Functionality */}
               <div id="core-functionality" className="mb-10">
@@ -476,17 +497,17 @@ const CognitiaReviewClient = () => {
 
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
                   <h4 className="text-lg font-semibold text-blue-900 mb-4">Quantitative Measurements</h4>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600">2.3s</div>
+                      <div className="text-2xl md:text-3xl font-bold text-blue-600">2.3s</div>
                       <div className="text-sm text-blue-800">Average response time</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600">94%</div>
+                      <div className="text-2xl md:text-3xl font-bold text-blue-600">94%</div>
                       <div className="text-sm text-blue-800">Query accuracy rate</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600">87%</div>
+                      <div className="text-2xl md:text-3xl font-bold text-blue-600">87%</div>
                       <div className="text-sm text-blue-800">Context retention accuracy</div>
                     </div>
                   </div>
@@ -514,7 +535,7 @@ const CognitiaReviewClient = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FeatureCard
                     icon={Brain}
                     title="Context Understanding"
@@ -533,7 +554,7 @@ const CognitiaReviewClient = () => {
               <div id="integration-capabilities" className="mb-10">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Integration Capabilities Assessment</h3>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Tested Integrations</h4>
                     <div className="space-y-3">
@@ -606,7 +627,7 @@ const CognitiaReviewClient = () => {
 
             {/* User Experience */}
             <section id="user-experience" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">User Experience: From Setup to Mastery</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">User Experience: From Setup to Mastery</h2>
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Setup & Onboarding Process</h3>
@@ -615,7 +636,7 @@ const CognitiaReviewClient = () => {
                   <p className="text-green-800 mb-4">
                     From account creation to first meaningful AI interaction took just 12 minutes. The onboarding process is streamlined and intuitive.
                   </p>
-                  <div className="grid md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="text-center">
                       <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-2">1</div>
                       <div className="text-sm text-green-800">Account Setup<br/><span className="text-xs">(2 min)</span></div>
@@ -677,19 +698,19 @@ const CognitiaReviewClient = () => {
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Learning Curve Assessment</h3>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="text-center p-6 bg-green-50 border border-green-200 rounded-lg">
-                    <div className="text-3xl font-bold text-green-600 mb-2">Day 1</div>
+                    <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">Day 1</div>
                     <div className="text-sm text-green-800 font-medium mb-2">Basic Usage</div>
                     <p className="text-xs text-green-700">Simple queries, email reading, basic integrations</p>
                   </div>
                   <div className="text-center p-6 bg-blue-50 border border-blue-200 rounded-lg">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">Week 1</div>
+                    <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">Week 1</div>
                     <div className="text-sm text-blue-800 font-medium mb-2">Intermediate</div>
                     <p className="text-xs text-blue-700">Multi-agent workflows, complex queries, calendar management</p>
                   </div>
                   <div className="text-center p-6 bg-purple-50 border border-purple-200 rounded-lg">
-                    <div className="text-3xl font-bold text-purple-600 mb-2">Month 1</div>
+                    <div className="text-2xl md:text-3xl font-bold text-purple-600 mb-2">Month 1</div>
                     <div className="text-sm text-purple-800 font-medium mb-2">Advanced</div>
                     <p className="text-xs text-purple-700">Custom workflows, financial analysis, predictive insights</p>
                   </div>
@@ -699,7 +720,7 @@ const CognitiaReviewClient = () => {
 
             {/* Comparative Analysis */}
             <section id="comparative-analysis" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">How Cognitia AI Stacks Up Against Competitors</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How Cognitia AI Stacks Up Against Competitors</h2>
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Direct Competitor Comparison</h3>
@@ -787,7 +808,7 @@ const CognitiaReviewClient = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-green-900 mb-4">Unique Selling Points</h3>
                   <ul className="space-y-3 text-green-800">
@@ -836,9 +857,9 @@ const CognitiaReviewClient = () => {
 
             {/* Pros and Cons */}
             <section id="pros-cons" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Honest Assessment: Pros and Cons</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Honest Assessment: Pros and Cons</h2>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-green-900 mb-6 flex items-center">
                     <Check className="w-6 h-6 mr-3" />
@@ -945,7 +966,7 @@ const CognitiaReviewClient = () => {
 
             {/* Evolution & Updates */}
             <section id="evolution" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Evolution & Future Roadmap</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Evolution & Future Roadmap</h2>
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Recent Updates (2025)</h3>
@@ -973,7 +994,7 @@ const CognitiaReviewClient = () => {
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Future Roadmap (Q4 2025 - Q1 2026)</h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white border border-gray-200 rounded-lg p-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Confirmed Features</h4>
                     <ul className="space-y-2 text-gray-700 text-sm">
@@ -1007,9 +1028,9 @@ const CognitiaReviewClient = () => {
 
             {/* Purchase Recommendations */}
             <section id="purchase-recommendations" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Who Should (and Shouldn&apos;t) Buy Cognitia AI</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Who Should (and Shouldn&apos;t) Buy Cognitia AI</h2>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-green-900 mb-4 flex items-center">
                     <Check className="w-6 h-6 mr-3" />
@@ -1087,7 +1108,7 @@ const CognitiaReviewClient = () => {
 
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-blue-900 mb-4">Alternatives to Consider</h3>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-white border border-blue-200 rounded-lg p-4">
                     <h4 className="font-semibold text-blue-900 mb-2">Budget Option</h4>
                     <p className="text-sm text-blue-800 mb-2"><strong>ChatGPT Plus ($20/mo)</strong></p>
@@ -1109,7 +1130,7 @@ const CognitiaReviewClient = () => {
 
             {/* Where to Buy */}
             <section id="where-to-buy" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Where to Buy & Current Offers</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Where to Buy & Current Offers</h2>
 
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-8 mb-8">
                 <div className="text-center">
@@ -1128,7 +1149,7 @@ const CognitiaReviewClient = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Official Pricing</h3>
                   <div className="space-y-3">
@@ -1173,11 +1194,11 @@ const CognitiaReviewClient = () => {
 
             {/* Final Verdict */}
             <section id="final-verdict" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Final Verdict: A Game-Changer for Digital Productivity</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Final Verdict: A Game-Changer for Digital Productivity</h2>
 
               <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-8 mb-8">
                 <div className="text-center mb-6">
-                  <div className="text-6xl font-bold text-green-600 mb-2">9.1</div>
+                  <div className="text-5xl md:text-6xl font-bold text-green-600 mb-2">9.1</div>
                   <div className="text-xl font-semibold text-gray-900">Outstanding</div>
                   <div className="flex justify-center mt-2">
                     {[...Array(5)].map((_, i) => (
@@ -1190,19 +1211,19 @@ const CognitiaReviewClient = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center p-6 bg-white border border-gray-200 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">9.5/10</div>
+                  <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">9.5/10</div>
                   <div className="font-semibold text-gray-900 mb-1">Innovation</div>
                   <p className="text-sm text-gray-600">Persistent memory is genuinely revolutionary</p>
                 </div>
                 <div className="text-center p-6 bg-white border border-gray-200 rounded-lg">
-                  <div className="text-3xl font-bold text-green-600 mb-2">9.0/10</div>
+                  <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">9.0/10</div>
                   <div className="font-semibold text-gray-900 mb-1">Performance</div>
                   <p className="text-sm text-gray-600">Fast, reliable, and consistently accurate</p>
                 </div>
                 <div className="text-center p-6 bg-white border border-gray-200 rounded-lg">
-                  <div className="text-3xl font-bold text-yellow-600 mb-2">8.5/10</div>
+                  <div className="text-2xl md:text-3xl font-bold text-yellow-600 mb-2">8.5/10</div>
                   <div className="font-semibold text-gray-900 mb-1">Value</div>
                   <p className="text-sm text-gray-600">Premium pricing justified by unique features</p>
                 </div>
@@ -1249,11 +1270,11 @@ const CognitiaReviewClient = () => {
 
             {/* Evidence & Proof */}
             <section id="evidence" className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Evidence & Proof: Real User Experiences</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Evidence & Proof: Real User Experiences</h2>
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">User Testimonials (2025)</h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <TestimonialCard
                     quote="The persistent memory feature has transformed how I work. Cognitia AI remembers client preferences from months ago and helps me maintain consistency across all communications."
                     author="Sarah Chen"
@@ -1283,7 +1304,7 @@ const CognitiaReviewClient = () => {
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance Screenshots</h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white border border-gray-200 rounded-lg p-4">
                     <div className="bg-gray-100 h-48 rounded-lg flex items-center justify-center mb-4">
                       <div className="text-center text-gray-600">
@@ -1334,7 +1355,7 @@ const CognitiaReviewClient = () => {
                 <p className="text-gray-700 mb-4">
                   After two months of intensive daily use, Cognitia AI has maintained consistent performance and reliability. The persistent memory system has proven its value by accurately recalling details from early conversations and maintaining context across complex, multi-week projects.
                 </p>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                     <div className="text-2xl font-bold text-green-600 mb-1">98.5%</div>
                     <div className="text-sm text-gray-600">Uptime</div>
@@ -1391,6 +1412,7 @@ const CognitiaReviewClient = () => {
         </main>
       </div>
     </div>
+  </div>
   );
 };
 

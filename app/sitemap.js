@@ -48,7 +48,7 @@ function discoverReviewPages() {
               url: `https://spectrumaireviews.com/reviews/${serviceDir}/${categoryDir}/${productDir}`,
               lastModified: fs.statSync(pageJsPath).mtime,
               changeFrequency: 'monthly',
-              priority: 0.95, // Reviews are high-value content
+              priority: 1.0, // Money pages (affiliate revenue) get highest priority
             });
           }
         });
@@ -72,7 +72,7 @@ export default function sitemap() {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 1.0, // Homepage gets highest priority
+      priority: 0.9, // Hub page - defers to money pages (reviews)
     },
     {
       url: `${baseUrl}/about`,

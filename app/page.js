@@ -55,172 +55,49 @@ export default function HomePage() {
           '@type': 'ListItem',
           position: 1,
           item: {
-            '@type': 'Review',
+            '@type': 'Article',
             name: 'Cognitia AI Review 2025',
             url: 'https://spectrumaireviews.com/reviews/ai-assistants/productivity/cognitia',
-            reviewRating: {
-              '@type': 'Rating',
-              ratingValue: '4.55',
-              bestRating: '5',
-              worstRating: '1'
-            }
+            headline: 'Cognitia AI Review 2025',
+            description: 'Comprehensive review of Cognitia AI with persistent memory testing'
           }
         },
         {
           '@type': 'ListItem',
           position: 2,
           item: {
-            '@type': 'Review',
+            '@type': 'Article',
             name: 'Zebracat AI Review 2025',
             url: 'https://spectrumaireviews.com/reviews/ai-art-generators/content-creation/zebracat',
-            reviewRating: {
-              '@type': 'Rating',
-              ratingValue: '4.6',
-              bestRating: '5',
-              worstRating: '1'
-            }
+            headline: 'Zebracat AI Review 2025',
+            description: 'In-depth Zebracat AI video generator review and testing results'
           }
         },
         {
           '@type': 'ListItem',
           position: 3,
           item: {
-            '@type': 'Review',
+            '@type': 'Article',
             name: 'Genspark AI Review 2025',
             url: 'https://spectrumaireviews.com/reviews/ai-assistants/productivity/genspark',
-            reviewRating: {
-              '@type': 'Rating',
-              ratingValue: '4.0',
-              bestRating: '5',
-              worstRating: '1'
-            }
+            headline: 'Genspark AI Review 2025',
+            description: 'Complete Genspark AI phone calling agent review and analysis'
           }
         },
         {
           '@type': 'ListItem',
           position: 4,
           item: {
-            '@type': 'Review',
+            '@type': 'Article',
             name: 'GetGenie AI Review 2025',
             url: 'https://spectrumaireviews.com/reviews/ai-writing-tool-reviews/content-creation/getgenie',
-            reviewRating: {
-              '@type': 'Rating',
-              ratingValue: '4.25',
-              bestRating: '5',
-              worstRating: '1'
-            }
+            headline: 'GetGenie AI Review 2025',
+            description: 'Expert GetGenie AI WordPress SEO writing tool review'
           }
         }
       ]
     }
   };
-
-  const featuredReviewJsonLd = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Review',
-      itemReviewed: {
-        '@type': 'SoftwareApplication',
-        name: 'Cognitia AI',
-        applicationCategory: 'AI Assistant with Persistent Memory',
-        operatingSystem: 'Web, iOS, Android',
-      },
-      author: {
-        '@type': 'Person',
-        name: 'Michael Anderson',
-        jobTitle: 'AI Productivity Tools Specialist',
-      },
-      datePublished: '2025-01-15',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '4.55',
-        bestRating: '5',
-        worstRating: '1'
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'SpectrumAIReviews'
-      }
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Review',
-      itemReviewed: {
-        '@type': 'SoftwareApplication',
-        name: 'Zebracat AI',
-        applicationCategory: 'AI Video Generator',
-        operatingSystem: 'Web',
-      },
-      author: {
-        '@type': 'Person',
-        name: 'Michael Anderson',
-        jobTitle: 'Senior Digital Marketing Specialist',
-      },
-      datePublished: '2025-01-15',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '4.6',
-        bestRating: '5',
-        worstRating: '1'
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'SpectrumAIReviews'
-      }
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Review',
-      itemReviewed: {
-        '@type': 'SoftwareApplication',
-        name: 'Genspark AI',
-        applicationCategory: 'AI Assistant & Agent',
-        operatingSystem: 'Web, iOS, Android',
-      },
-      author: {
-        '@type': 'Person',
-        name: 'Michael Anderson',
-        jobTitle: 'Senior Digital Marketing Specialist',
-      },
-      datePublished: '2025-01-15',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '4.0',
-        bestRating: '5',
-        worstRating: '1'
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'SpectrumAIReviews'
-      }
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Review',
-      itemReviewed: {
-        '@type': 'SoftwareApplication',
-        name: 'GetGenie AI',
-        applicationCategory: 'AI Writing & SEO Software for WordPress',
-        operatingSystem: 'Web, WordPress Plugin',
-      },
-      author: {
-        '@type': 'Person',
-        name: 'Michael Anderson',
-        jobTitle: 'AI Writing Tools Specialist',
-      },
-      datePublished: '2025-01-15',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '4.25',
-        bestRating: '5',
-        worstRating: '1'
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'SpectrumAIReviews'
-      }
-    }
-  ];
 
   return (
     <>
@@ -229,14 +106,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {featuredReviewJsonLd.map((review, index) => (
-        <Script
-          key={`review-${index}`}
-          id={`json-ld-featured-review-${index}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(review) }}
-        />
-      ))}
 
       <div className="container mx-auto px-4">
         {/* Hero Section with SEO-Optimized Content */}
@@ -666,6 +535,10 @@ export default function HomePage() {
               <span className="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full shadow-lg flex items-center gap-2">
                 <span className="text-base">⭐</span> EDITOR&apos;S CHOICE
               </span>
+              <Link href="/reviews/ai-assistants/productivity/cognitia"
+                    className="ml-auto px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:scale-105 transition-transform shadow-lg font-bold">
+                Read Full Review →
+              </Link>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
@@ -679,19 +552,11 @@ export default function HomePage() {
                   <ul className="space-y-4">
                     <li className="flex items-start gap-4 group">
                       <span className="text-green-500 text-2xl group-hover:scale-125 transition-transform"><Emoji label="checkmark">✔️</Emoji></span>
-                      <span className="text-gray-700"><strong className="text-gray-900">Persistent Memory:</strong> Only AI that remembers context across months of usage</span>
+                      <span className="text-gray-700"><strong className="text-gray-900">Revolutionary persistent memory</strong> that remembers context across months</span>
                     </li>
                     <li className="flex items-start gap-4 group">
                       <span className="text-green-500 text-2xl group-hover:scale-125 transition-transform"><Emoji label="checkmark">✔️</Emoji></span>
-                      <span className="text-gray-700"><strong className="text-gray-900">Deep Email Integration:</strong> Manages 500+ emails daily across multiple accounts</span>
-                    </li>
-                    <li className="flex items-start gap-4 group">
-                      <span className="text-green-500 text-2xl group-hover:scale-125 transition-transform"><Emoji label="checkmark">✔️</Emoji></span>
-                      <span className="text-gray-700"><strong className="text-gray-900">Financial Intelligence:</strong> Bank-level security with Plaid integration</span>
-                    </li>
-                    <li className="flex items-start gap-4 group">
-                      <span className="text-green-500 text-2xl group-hover:scale-125 transition-transform"><Emoji label="checkmark">✔️</Emoji></span>
-                      <span className="text-gray-700"><strong className="text-gray-900">Lightning-Fast:</strong> 2.3s average response time with 94% accuracy</span>
+                      <span className="text-gray-700"><strong className="text-gray-900">Deep integrations</strong> with email, calendar, and financial systems</span>
                     </li>
                   </ul>
                 </div>
@@ -747,9 +612,12 @@ export default function HomePage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border-l-4 border-purple-500 shadow-md">
                 <p className="text-sm leading-relaxed text-gray-700">
-                  <strong className="text-gray-900">Expert Verdict:</strong> &ldquo;After 60 days of testing with 500+ daily emails and complex financial workflows, Cognitia AI delivers on its promise of persistent memory with 87% context retention accuracy. The memory system alone revolutionizes AI assistance. Perfect for knowledge workers who value context and deep integrations over basic chat.&rdquo;
-                  - <em className="text-purple-600 font-semibold">Michael Anderson, AI Productivity Tools Specialist</em>
+                  <strong className="text-gray-900">Editor&apos;s Pick:</strong> &ldquo;Cognitia AI delivers genuine persistent memory with exceptional email integration. Essential for knowledge workers.&rdquo;
+                  - <em className="text-purple-600 font-semibold">Michael Anderson</em>
                 </p>
+                <Link href="/reviews/ai-assistants/productivity/cognitia" className="block mt-2 text-primary font-semibold hover:underline">
+                  → Read our complete 60-day testing review
+                </Link>
               </div>
             </article>
           </div>
@@ -967,7 +835,7 @@ export default function HomePage() {
                 <Emoji label="brain">🧠</Emoji> AI Assistants & Agents
               </h4>
               <p className="mb-2 text-gray-700 leading-relaxed">
-                <strong>Cognitia AI</strong> revolutionizes AI assistance with persistent memory that never forgets. Unlike ChatGPT or Claude, Cognitia remembers your preferences, projects, and context across months of usage with 87% retention accuracy. Seamlessly integrates with Gmail, Outlook, and financial accounts through bank-level Plaid security. Perfect for knowledge workers managing 100+ emails daily, executives juggling multiple projects, and professionals who need AI that truly understands their workflow. The $83/mo Premium plan unlocks multi-agent orchestration and financial intelligence capabilities unmatched by competitors.
+                <strong>Cognitia AI</strong> is the only AI assistant with true persistent memory - remembering context across months. Tested with 500+ daily emails. <span className="text-primary font-semibold">9.1/10 rating.</span>
               </p>
               <Link href="/reviews/ai-assistants/productivity/cognitia" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
                 Read our complete Cognitia AI review <Emoji label="arrow right">→</Emoji>

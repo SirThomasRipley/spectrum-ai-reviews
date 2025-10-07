@@ -2,13 +2,13 @@ import ZebracatReviewClient from './ZebracatReviewClient';
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Zebracat AI Review 2025: 127 Videos Later - Honest Analysis',
-  description: 'Zebracat AI review after 3 months: 127 videos tested across TikTok, YouTube Shorts, Instagram Reels. Pricing ($39-$199/mo), vs CapCut/InVideo, quality (96.1% success). Rating: 4.2/5.',
+  title: 'Zebracat AI Review 2025: 127 Videos Tested - Analysis',
+  description: '127 videos tested: 96.1% success. Pricing $39-$199/mo, vs CapCut/InVideo. Text-to-video AI review. Expert analysis. Rating: 4.2/5.',
   keywords: 'zebracat review, zebracat ai review 2025, zebracat ai video generator, zebracat text to video, ai video generator, text to video ai, zebracat pricing 2025, zebracat vs capcut, zebracat vs invideo, zebracat vs pictory, zebracat review 2025, is zebracat worth it, zebracat free plan, zebracat cat mode, zebracat super cat, zebracat discount code, how to cancel zebracat, zebracat not working, zebracat alternatives, ai video maker, faceless video creator, blog to video converter, zebracat ai avatars, zebracat voice cloning, ai voices, viral video creator, video marketing, social media video automation, youtube shorts creator, tiktok video maker, instagram reels ai, automated video editing, content repurposing tool, zebracat for tiktok, zebracat for youtube shorts, best ai video generator 2025',
   authors: [{ name: 'Michael Anderson', url: 'https://spectrumaireviews.com/about' }],
   openGraph: {
-    title: 'Zebracat Review 2025: Does It Really Work? 127 Videos Tested',
-    description: 'After 3 months of testing Zebracat AI with 127 videos created, here&apos;s our honest verdict on quality (96.1% success), pricing, and real value. 4.2/5 rating. Get 15% OFF.',
+    title: 'Zebracat Review 2025: 127 Videos Tested - Does It Work?',
+    description: '127 videos, 96.1% success rate. Text-to-video AI tested. Pricing $39-$199/mo. Expert verdict with pros/cons. 4.2/5 rating. Get 15% OFF.',
     url: 'https://spectrumaireviews.com/reviews/ai-art-generators/content-creation/zebracat',
     siteName: 'SpectrumAIReviews',
     locale: 'en_US',
@@ -27,8 +27,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zebracat Review 2025: 127 Videos Later, Here&apos;s The Truth',
-    description: '96.1% success rate across 127 AI videos. Cat Mode ($35/mo) is the sweet spot. Detailed review with pros, cons, and exclusive 15% discount code.',
+    title: 'Zebracat AI Review 2025: 127 Videos Tested - Analysis',
+    description: '127 videos created: 96.1% success rate. Pricing $39-$199/mo. Text-to-video AI analysis. Rating: 4.2/5. Get 15% discount.',
     images: ['https://spectrumaireviews.com/images/zebracat-review-twitter.jpg'],
     creator: '@SpectrumAIReview',
   },

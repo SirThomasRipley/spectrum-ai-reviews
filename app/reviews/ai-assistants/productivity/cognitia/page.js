@@ -3,15 +3,15 @@ import Script from 'next/script';
 
 export const metadata = {
   // PRIMARY METADATA (Required)
-  title: 'Cognitia AI Review 2025: Persistent Memory AI Assistant - 60 Days Tested',
-  description: 'In-depth Cognitia AI review after 60 days of testing. Expert analysis of persistent memory, email integration, financial intelligence, and pricing ($17-$83/mo). Rating: 9.1/10.',
+  title: 'Cognitia AI Review 2025: Persistent Memory - 60 Days',
+  description: 'Cognitia AI review: 60 days tested. Persistent memory, email integration, financial AI. Pricing $17-$83/mo. Expert analysis. Rating: 9.1/10.',
   keywords: 'cognitia ai review, cognitia ai review 2025, ai assistant with memory, persistent memory ai, cognitia ai pricing, cognitia ai vs chatgpt, email ai assistant, financial ai assistant, cognitia ai alternatives',
   authors: [{ name: 'Michael Anderson', url: 'https://spectrumaireviews.com/about' }],
 
   // OPENGRAPH (Social Media)
   openGraph: {
-    title: 'Cognitia AI Review 2025: Does Persistent Memory Really Work? 60 Days Tested',
-    description: 'After 60 days of testing Cognitia AI with 500+ daily emails and financial data integration, here&apos;s our honest verdict on persistent memory (87% accuracy), pricing, and real value. 9.1/10 rating.',
+    title: 'Cognitia AI Review 2025: Persistent Memory Works? 60 Days',
+    description: '60 days tested: 87% memory accuracy, 500+ emails, financial data. Persistent AI that remembers. Pricing $17-$83/mo. Expert verdict. 9.1/10 rating.',
     url: 'https://spectrumaireviews.com/reviews/ai-assistants/productivity/cognitia',
     siteName: 'SpectrumAIReviews',
     locale: 'en_US',
@@ -30,8 +30,8 @@ export const metadata = {
   // TWITTER CARDS
   twitter: {
     card: 'summary_large_image',
-    title: 'Cognitia AI Review 2025: 60 Days Later, Here&apos;s The Truth',
-    description: '87% memory accuracy across 60 days. Persistent AI that actually remembers your context. Detailed review with pros, cons, and exclusive testing insights.',
+    title: 'Cognitia AI Review 2025: Persistent Memory - 60 Days',
+    description: 'Persistent memory AI tested: 9.1/10 rating. Email/financial integration. $17-$83/mo pricing. Expert analysis with 87% accuracy.',
     images: ['https://spectrumaireviews.com/images/cognitia-review-twitter.jpg'],
     creator: '@SpectrumAIReview',
   },

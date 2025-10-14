@@ -111,7 +111,7 @@ export default function ServicePage({ params }) {
                           )}
                         </div>
                       </div>
-                      <div className="text-primary font-bold text-2xl ml-4">{review.rating}/10</div>
+                      <div className="text-primary font-bold text-2xl ml-4">{review.displayRating}</div>
                     </div>
                   </Link>
                 ))}
@@ -160,7 +160,7 @@ export default function ServicePage({ params }) {
                         {category?.name || review.category}
                       </td>
                       <td className="p-4 text-center">
-                        <span className="text-primary font-bold">{review.rating}/10</span>
+                        <span className="text-primary font-bold">{review.displayRating}</span>
                       </td>
                       <td className="p-4 text-center">
                         {review.price.free?.cost === 0 && 'Free'}
@@ -186,7 +186,7 @@ export default function ServicePage({ params }) {
             <summary className="font-bold cursor-pointer">What is the best {service.name.toLowerCase()}?</summary>
             <p className="mt-2 text-secondary-foreground">
               {serviceReviews.length > 0
-                ? `Based on our testing, ${serviceReviews[0].title} ranks highest with a ${serviceReviews[0].rating}/10 rating for overall quality and value.`
+                ? `Based on our testing, ${serviceReviews[0].title} ranks highest with a ${serviceReviews[0].displayRating} rating for overall quality and value.`
                 : 'We are currently evaluating tools in this category. Check back soon for our recommendations!'}
             </p>
           </details>

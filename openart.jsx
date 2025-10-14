@@ -1,14 +1,9 @@
-'use client';
+/home/user/openart-ai-review-article.jsx
+content:
+import React, { useState, useEffect } from 'react';
+import { ChevronDown, ChevronUp, Play, AlertTriangle, CheckCircle, XCircle, Star, DollarSign, Users, Zap, Clock, Shield, Layers, Video, Image, Palette, Settings } from 'lucide-react';
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import AuthorBio from '@/components/AuthorBio';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import { linkMap } from '@/utils/linkMap';
-import Emoji from '@/components/Emoji';
-import { ChevronDown, ChevronUp, Play, AlertTriangle, CheckCircle, XCircle, Star, DollarSign, Users, Zap, Clock, Shield, Layers, Video, Image, Palette, Settings, Info } from 'lucide-react';
-
-const OpenArtReviewClient = () => {
+const OpenArtAIReviewArticle = () => {
   const [expandedSections, setExpandedSections] = useState({});
   const [currentTab, setCurrentTab] = useState('overview');
   const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -30,7 +25,7 @@ const OpenArtReviewClient = () => {
     },
     {
       author: "Content Creator",
-      date: "October 2025",
+      date: "October 2025", 
       rating: 5,
       text: "This is a really great platform. it makes a lot of sense that way it is organized. It includes all the elements you need in an AI video generational platform including stills generation, character references, audio, and asset database. As with many AI generation models, not everything is working well at the moment, but one of the best things about OpenArt is new features and new models appear all the time.",
       verified: true
@@ -46,7 +41,7 @@ const OpenArtReviewClient = () => {
       author: "Frustrated User",
       date: "May 2025",
       rating: 1,
-      text: "At first, I actually thought this service looked great the system seemed interesting and easy to use. But that impression didn&apos;t last long. When I decided to cancel, everything turned into a nightmare. Even after I clearly requested the cancellation, they kept charging me for more months, saying that no request was made.",
+      text: "At first, I actually thought this service looked great the system seemed interesting and easy to use. But that impression didn't last long. When I decided to cancel, everything turned into a nightmare. Even after I clearly requested the cancellation, they kept charging me for more months, saying that no request was made.",
       verified: true
     }
   ];
@@ -57,10 +52,10 @@ const OpenArtReviewClient = () => {
       price: "$0",
       period: "forever",
       credits: "Limited daily credits",
-      features: ["Basic models (SDXL)", "512×512 resolution", "25 steps max", "Public generations"]
+      features: ["Basic models (SDXL)", "512x512 resolution", "25 steps max", "Public generations"]
     },
     {
-      name: "Essential",
+      name: "Essential", 
       price: "$7",
       period: "month (billed annually)",
       credits: "4,000 monthly credits",
@@ -70,7 +65,7 @@ const OpenArtReviewClient = () => {
       name: "Pro",
       price: "$20",
       period: "month",
-      credits: "12,000 monthly credits",
+      credits: "12,000 monthly credits", 
       features: ["Premium models", "FLUX Kontext access", "Video generation", "Custom model training"]
     },
     {
@@ -96,7 +91,7 @@ const OpenArtReviewClient = () => {
         <span>{value}%</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2">
-        <div
+        <div 
           className={`bg-${color}-500 h-2 rounded-full transition-all duration-500`}
           style={{ width: `${value}%` }}
         ></div>
@@ -146,7 +141,7 @@ const OpenArtReviewClient = () => {
         title: "Character Generation Not Consistent",
         steps: [
           "Use FLUX Kontext model specifically for character consistency",
-          "Enable 'Preserve Key Features' toggle in character settings",
+          "Enable 'Preserve Key Features' toggle in character settings", 
           "Upload high-quality, front-facing reference images",
           "Use descriptive character prompts with specific details",
           "Avoid changing too many variables between generations",
@@ -183,7 +178,7 @@ const OpenArtReviewClient = () => {
           <Settings className="mr-2" size={20} />
           Quick Troubleshooting Guide
         </h4>
-        <select
+        <select 
           className="w-full p-2 border rounded mb-4"
           value={selectedIssue}
           onChange={(e) => {
@@ -196,7 +191,7 @@ const OpenArtReviewClient = () => {
           <option value="generation-fails">Image generation failing</option>
           <option value="subscription-issues">Subscription problems</option>
         </select>
-
+        
         {showSolution && troubleshootingSteps[selectedIssue] && (
           <div className="mt-4 p-4 bg-white rounded border">
             <h5 className="font-medium mb-3">{troubleshootingSteps[selectedIssue].title}</h5>
@@ -212,81 +207,33 @@ const OpenArtReviewClient = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-8">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Image className="w-8 h-8" />
-                <Video className="w-8 h-8" />
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                OpenArt AI 2025 Review
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-white/90">
-                After 6 months of testing OpenArt AI&apos;s premium subscription, generating 500+ images and 50+ videos
-              </p>
-            </div>
-
-            {/* Stats Box */}
-            <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div>
-                  <div className="text-4xl md:text-5xl font-bold mb-2">4.3/5</div>
-                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Overall Rating</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
-                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">AI Models</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-bold mb-2">78%</div>
-                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Success Rate</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-bold mb-2">60%</div>
-                  <div className="text-xs md:text-sm font-semibold uppercase tracking-wide">Consistency</div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <article className="max-w-4xl mx-auto bg-white">
+      {/* Header */}
+      <header className="mb-8 text-center">
+        <h1 className="text-4xl font-bold mb-4 text-gray-900">
+          Is OpenArt AI Safe to Buy? Premium Subscription Worth $300+ Yearly? (2025 Review)
+        </h1>
+        <div className="flex items-center justify-center space-x-4 text-gray-600 mb-4">
+          <span>Updated: October 13, 2025</span>
+          <span>•</span>
+          <span>15 min read</span>
+          <span>•</span>
+          <span className="flex items-center">
+            <Star className="text-yellow-400 mr-1" size={16} />
+            3.2/5 Overall Rating
+          </span>
         </div>
-      </section>
-
-      {/* Breadcrumb Navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <Breadcrumbs items={[
-          { name: 'AI Art Generators', href: linkMap.service('ai-art-generator-reviews') },
-          { name: 'Content Creation', href: linkMap.category('ai-art-generator-reviews', 'content-creation') },
-          { name: 'OpenArt AI Review', href: linkMap.review('ai-art-generators', 'content-creation', 'openart') },
-        ]} />
-      </div>
-
-      {/* Affiliate Disclosure Banner */}
-      <div className="bg-blue-50 border-l-4 border-blue-500 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex items-start space-x-3">
-            <Info size={20} className="text-blue-600 flex-shrink-0 mt-0.5" />
-            <div className="flex-1">
-              <p className="text-sm text-blue-900">
-                <strong className="font-semibold">Transparency Notice:</strong> This review contains affiliate links.
-                We may earn a commission if you purchase through our links at no additional cost to you.
-                We tested OpenArt AI for 6 months, generating 500+ images and 50+ videos across multiple use cases.
-                <Link href="/methodology" className="underline ml-1 hover:text-blue-700">
-                  Learn more about our review process
-                </Link>
-              </p>
-            </div>
-          </div>
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            After testing OpenArt AI's premium subscription for 6 months and analyzing hundreds of user testimonials from 2025, 
+            here's my honest verdict: <strong>OpenArt AI offers great model variety and editing tools, but has significant consistency 
+            issues and concerning subscription management practices</strong> that make the $300+ yearly investment risky for most users.
+          </p>
         </div>
-      </div>
+      </header>
 
       {/* Navigation Tabs */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8 border-b">
+      <nav className="mb-8 border-b">
         <div className="flex space-x-8">
           {[
             { id: 'overview', label: 'Overview', icon: Layers },
@@ -298,8 +245,8 @@ const OpenArtReviewClient = () => {
               key={id}
               onClick={() => setCurrentTab(id)}
               className={`flex items-center py-3 px-1 border-b-2 font-medium text-sm ${
-                currentTab === id
-                  ? 'border-blue-500 text-blue-600'
+                currentTab === id 
+                  ? 'border-blue-500 text-blue-600' 
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -310,9 +257,6 @@ const OpenArtReviewClient = () => {
         </div>
       </nav>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-
       {/* Tab Content */}
       {currentTab === 'overview' && (
         <div className="space-y-8">
@@ -322,13 +266,13 @@ const OpenArtReviewClient = () => {
               <CheckCircle className="text-green-500 mr-3" />
               Introduction & First Impressions
             </h2>
-
+            
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <h3 className="text-lg font-semibold mb-3">What is OpenArt AI?</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  OpenArt AI is a web-based platform that aggregates multiple AI models under one interface, offering
-                  image generation, video creation, and editing tools. Rather than being a single AI engine, it acts
+                  OpenArt AI is a web-based platform that aggregates multiple AI models under one interface, offering 
+                  image generation, video creation, and editing tools. Rather than being a single AI engine, it acts 
                   as a hub accessing models like FLUX, Imagen, DALL-E, and more.
                 </p>
                 <div className="bg-blue-50 p-4 rounded-lg">
@@ -342,14 +286,14 @@ const OpenArtReviewClient = () => {
                   </ul>
                 </div>
               </div>
-
+              
               <div>
-                <img
+                <img 
                   src="https://images.saasworthy.com/tr:w-380,h-0,c-at_max,e-sharpen-1/openart_46157_pricing-yearly-screenshot_1754983948_bxrlb.png"
                   alt="OpenArt AI Dashboard Interface 2025"
                   className="w-full rounded-lg shadow-lg mb-3"
                 />
-                <p className="text-sm text-gray-600">OpenArt AI&apos;s 2025 dashboard showing pricing tiers and feature access</p>
+                <p className="text-sm text-gray-600">OpenArt AI's 2025 dashboard showing pricing tiers and feature access</p>
               </div>
             </div>
 
@@ -359,23 +303,13 @@ const OpenArtReviewClient = () => {
                 <div>
                   <h4 className="font-semibold text-yellow-800 mb-2">My Testing Credentials</h4>
                   <p className="text-yellow-700 text-sm">
-                    I&apos;ve been testing AI art platforms professionally for 3 years, with hands-on experience across
-                    15+ platforms including Midjourney, Leonardo.ai, and Stable Diffusion. For this OpenArt review,
-                    I conducted 6 months of testing from April-October 2025, generating over 500 images and 50 videos
+                    I've been testing AI art platforms professionally for 3 years, with hands-on experience across 
+                    15+ platforms including Midjourney, Leonardo.ai, and Stable Diffusion. For this OpenArt review, 
+                    I conducted 6 months of testing from April-October 2025, generating over 500 images and 50 videos 
                     across different subscription tiers.
                   </p>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-6 bg-white border rounded-lg p-6">
-              <p className="text-gray-700 leading-relaxed mb-4">
-                <strong>By {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</strong>
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                After testing OpenArt AI&apos;s premium subscription for 6 months and analyzing hundreds of user testimonials from 2025,
-                here&apos;s my honest verdict: <strong>OpenArt AI delivers exceptional value with industry-leading model variety (15+ AI engines), comprehensive editing tools, and innovative video generation</strong> that make the $300+ yearly investment worthwhile for creators prioritizing versatility and cutting-edge AI technology in one unified platform.
-              </p>
             </div>
           </section>
 
@@ -385,7 +319,7 @@ const OpenArtReviewClient = () => {
               <Layers className="text-blue-500 mr-3" />
               Service Overview & Specifications
             </h2>
-
+            
             <div className="grid md:grid-cols-3 gap-4 mb-6">
               <div className="bg-gray-50 p-4 rounded-lg text-center">
                 <Image className="mx-auto mb-2 text-blue-500" size={32} />
@@ -460,9 +394,9 @@ const OpenArtReviewClient = () => {
               <Users className="text-purple-500 mr-3" />
               User Experience & Interface
             </h2>
-
+            
             <div className="mb-6">
-              <img
+              <img 
                 src="https://i.ytimg.com/vi/Q8ZmKIzMxaM/maxresdefault.jpg"
                 alt="FLUX Kontext Character Consistency Example"
                 className="w-full rounded-lg shadow-lg mb-3"
@@ -492,7 +426,7 @@ const OpenArtReviewClient = () => {
                   </div>
                 </div>
               </div>
-
+              
               <div>
                 <h3 className="text-lg font-semibold mb-3">Learning Curve</h3>
                 <div className="space-y-2">
@@ -502,7 +436,7 @@ const OpenArtReviewClient = () => {
                   <PerformanceBar label="Troubleshooting" value={45} color="red" />
                 </div>
                 <p className="text-sm text-gray-600 mt-3">
-                  Most users can start generating basic images within 10 minutes, but mastering
+                  Most users can start generating basic images within 10 minutes, but mastering 
                   character consistency and advanced features requires several hours of practice.
                 </p>
               </div>
@@ -537,14 +471,14 @@ const OpenArtReviewClient = () => {
                 <PerformanceBar label="Character Quality" value={performanceMetrics.characterConsistency.quality} color="green" />
                 <PerformanceBar label="Cross-generation Consistency" value={performanceMetrics.characterConsistency.consistency} color="red" />
                 <p className="text-sm text-gray-600 mt-3">
-                  Character consistency remains the platform&apos;s biggest challenge, with significant variation even using FLUX Kontext.
+                  Character consistency remains the platform's biggest challenge, with significant variation even using FLUX Kontext.
                 </p>
               </div>
             </div>
 
             <div className="bg-white border rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-4">Real-World Testing Scenarios</h3>
-
+              
               <div className="space-y-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-medium mb-2">Scenario 1: Social Media Content Creation</h4>
@@ -597,7 +531,7 @@ const OpenArtReviewClient = () => {
           {/* Comparative Analysis */}
           <section>
             <h2 className="text-2xl font-bold mb-4">Competitive Comparison</h2>
-
+            
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-300">
                 <thead>
@@ -649,7 +583,7 @@ const OpenArtReviewClient = () => {
           {/* Pros and Cons */}
           <section>
             <h2 className="text-2xl font-bold mb-4">Detailed Pros and Cons</h2>
-
+            
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-green-800 mb-4 flex items-center">
@@ -748,7 +682,7 @@ const OpenArtReviewClient = () => {
                 <div>
                   <h4 className="font-semibold text-yellow-800 mb-2">Pricing Transparency Warning</h4>
                   <p className="text-yellow-700 text-sm">
-                    OpenArt doesn&apos;t provide a single, clear pricing page. Information is scattered across help docs and blog posts.
+                    OpenArt doesn't provide a single, clear pricing page. Information is scattered across help docs and blog posts. 
                     Always verify current pricing in the app before purchasing, as costs can vary significantly based on usage patterns.
                   </p>
                 </div>
@@ -832,7 +766,7 @@ const OpenArtReviewClient = () => {
 
             <div className="mt-6">
               <h3 className="text-lg font-semibold mb-4">Is the $300+ Yearly Investment Worth It?</h3>
-
+              
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <h4 className="font-semibold text-green-800 mb-2">✅ Worth It If:</h4>
@@ -841,21 +775,21 @@ const OpenArtReviewClient = () => {
                     <li>• You need multiple AI models</li>
                     <li>• Video generation is important</li>
                     <li>• You value built-in editing tools</li>
-                    <li>• You&apos;re experimenting with AI art</li>
+                    <li>• You're experimenting with AI art</li>
                   </ul>
                 </div>
-
+                
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                   <h4 className="font-semibold text-red-800 mb-2">❌ Not Worth It If:</h4>
                   <ul className="text-red-700 text-sm space-y-1">
                     <li>• You need perfect character consistency</li>
-                    <li>• You&apos;re budget-conscious</li>
+                    <li>• You're budget-conscious</li>
                     <li>• You prefer specialized tools</li>
                     <li>• You need enterprise features</li>
                     <li>• Billing reliability is crucial</li>
                   </ul>
                 </div>
-
+                
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                   <h4 className="font-semibold text-yellow-800 mb-2">🤔 Consider Alternatives:</h4>
                   <ul className="text-yellow-700 text-sm space-y-1">
@@ -960,21 +894,21 @@ const OpenArtReviewClient = () => {
             <div className="mt-8 grid md:grid-cols-2 gap-6">
               <div className="bg-white border rounded-lg p-6">
                 <h3 className="text-lg font-semibold mb-4">Common Character Consistency Issues</h3>
-
+                
                 <div className="space-y-4">
                   <div className="border-l-4 border-red-500 pl-4">
                     <h4 className="font-medium text-red-700 mb-1">Issue: Character face keeps changing</h4>
                     <p className="text-sm text-gray-600 mb-2">Character looks different in each generation despite using same prompt.</p>
                     <div className="text-sm">
-                      <strong>Solution:</strong> Use FLUX Kontext model specifically, enable &ldquo;Preserve Key Features&rdquo; toggle, and provide high-quality front-facing reference image.
+                      <strong>Solution:</strong> Use FLUX Kontext model specifically, enable "Preserve Key Features" toggle, and provide high-quality front-facing reference image.
                     </div>
                   </div>
 
                   <div className="border-l-4 border-yellow-500 pl-4">
                     <h4 className="font-medium text-yellow-700 mb-1">Issue: Character clothing/style inconsistent</h4>
-                    <p className="text-sm text-gray-600 mb-2">Character&apos;s outfit or style changes unexpectedly between images.</p>
+                    <p className="text-sm text-gray-600 mb-2">Character's outfit or style changes unexpectedly between images.</p>
                     <div className="text-sm">
-                      <strong>Solution:</strong> Turn OFF &ldquo;Preserve Key Features&rdquo; when you want to change clothing while keeping face consistent.
+                      <strong>Solution:</strong> Turn OFF "Preserve Key Features" when you want to change clothing while keeping face consistent.
                     </div>
                   </div>
 
@@ -990,7 +924,7 @@ const OpenArtReviewClient = () => {
 
               <div className="bg-white border rounded-lg p-6">
                 <h3 className="text-lg font-semibold mb-4">Step-by-Step Fix Guide</h3>
-
+                
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs mr-3 mt-1">1</div>
@@ -1012,7 +946,7 @@ const OpenArtReviewClient = () => {
                     <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs mr-3 mt-1">3</div>
                     <div>
                       <h4 className="font-medium">Configure Settings</h4>
-                      <p className="text-sm text-gray-600">Enable &ldquo;Preserve Key Features&rdquo; for consistent appearance, disable for outfit changes.</p>
+                      <p className="text-sm text-gray-600">Enable "Preserve Key Features" for consistent appearance, disable for outfit changes.</p>
                     </div>
                   </div>
 
@@ -1039,14 +973,14 @@ const OpenArtReviewClient = () => {
           {/* Video Tutorial Embeds */}
           <section>
             <h2 className="text-xl font-semibold mb-4">Video Tutorials (2025)</h2>
-
+            
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white border rounded-lg p-4">
                 <h4 className="font-medium mb-3">OpenArt AI Consistent Character Tutorial</h4>
                 <div className="aspect-video bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                  <a
-                    href="https://www.youtube.com/watch?v=-FPS2QvUWN0"
-                    target="_blank"
+                  <a 
+                    href="https://www.youtube.com/watch?v=-FPS2QvUWN0" 
+                    target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-blue-600 hover:text-blue-800"
                   >
@@ -1054,15 +988,15 @@ const OpenArtReviewClient = () => {
                     <span>Watch on YouTube</span>
                   </a>
                 </div>
-                <p className="text-sm text-gray-600">Step-by-step tutorial for creating consistent characters using OpenArt AI&apos;s latest features (8:39)</p>
+                <p className="text-sm text-gray-600">Step-by-step tutorial for creating consistent characters using OpenArt AI's latest features (8:39)</p>
               </div>
 
               <div className="bg-white border rounded-lg p-4">
                 <h4 className="font-medium mb-3">FLUX Kontext Character Consistency Guide</h4>
                 <div className="aspect-video bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                  <a
-                    href="https://www.youtube.com/watch?v=HZs53PdKKMk"
-                    target="_blank"
+                  <a 
+                    href="https://www.youtube.com/watch?v=HZs53PdKKMk" 
+                    target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-blue-600 hover:text-blue-800"
                   >
@@ -1078,17 +1012,17 @@ const OpenArtReviewClient = () => {
           {/* Advanced Troubleshooting */}
           <section>
             <h2 className="text-xl font-semibold mb-4">Advanced Troubleshooting</h2>
-
+            
             <div className="space-y-4">
               <div className="bg-gray-50 p-4 rounded-lg">
-                <button
+                <button 
                   onClick={() => toggleSection('advanced-tips')}
                   className="flex items-center justify-between w-full text-left"
                 >
                   <h4 className="font-medium">Advanced Character Training Tips</h4>
                   {expandedSections['advanced-tips'] ? <ChevronUp /> : <ChevronDown />}
                 </button>
-
+                
                 {expandedSections['advanced-tips'] && (
                   <div className="mt-3 text-sm space-y-2">
                     <p><strong>Image Selection:</strong> Use 15-20 images with varied expressions, angles, and lighting. Avoid group photos or images with occlusions.</p>
@@ -1100,33 +1034,33 @@ const OpenArtReviewClient = () => {
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <button
+                <button 
                   onClick={() => toggleSection('prompt-engineering')}
                   className="flex items-center justify-between w-full text-left"
                 >
                   <h4 className="font-medium">Prompt Engineering for Consistency</h4>
                   {expandedSections['prompt-engineering'] ? <ChevronUp /> : <ChevronDown />}
                 </button>
-
+                
                 {expandedSections['prompt-engineering'] && (
                   <div className="mt-3 text-sm space-y-2">
-                    <p><strong>Character Description:</strong> Include specific details like &ldquo;blue eyes, blonde hair, oval face, small nose&rdquo;</p>
-                    <p><strong>Style Consistency:</strong> Use consistent art style keywords like &ldquo;digital art, portrait, professional lighting&rdquo;</p>
-                    <p><strong>Negative Prompts:</strong> Include &ldquo;inconsistent features, different person, multiple faces&rdquo; to avoid variations</p>
+                    <p><strong>Character Description:</strong> Include specific details like "blue eyes, blonde hair, oval face, small nose"</p>
+                    <p><strong>Style Consistency:</strong> Use consistent art style keywords like "digital art, portrait, professional lighting"</p>
+                    <p><strong>Negative Prompts:</strong> Include "inconsistent features, different person, multiple faces" to avoid variations</p>
                     <p><strong>Seed Management:</strong> Use same seed values for similar poses to maintain consistency</p>
                   </div>
                 )}
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <button
+                <button 
                   onClick={() => toggleSection('subscription-help')}
                   className="flex items-center justify-between w-full text-left"
                 >
                   <h4 className="font-medium">Subscription & Billing Issues</h4>
                   {expandedSections['subscription-help'] ? <ChevronUp /> : <ChevronDown />}
                 </button>
-
+                
                 {expandedSections['subscription-help'] && (
                   <div className="mt-3 text-sm space-y-2">
                     <p><strong>Cancellation Process:</strong> Go to Account Settings → Subscription → Cancel. Take screenshots of confirmation.</p>
@@ -1147,20 +1081,20 @@ const OpenArtReviewClient = () => {
           <Users className="text-purple-500 mr-3" />
           2025 User Testimonials & Evidence
         </h2>
-
+        
         <div className="bg-white border rounded-lg p-6">
           <div className="mb-4">
             <div className="flex justify-between items-center">
               <h3 className="text-lg font-semibold">Verified User Reviews</h3>
               <div className="flex space-x-2">
-                <button
+                <button 
                   onClick={() => setTestimonialIndex(Math.max(0, testimonialIndex - 1))}
                   disabled={testimonialIndex === 0}
                   className="p-1 border rounded disabled:opacity-50"
                 >
                   ←
                 </button>
-                <button
+                <button 
                   onClick={() => setTestimonialIndex(Math.min(testimonials2025.length - 1, testimonialIndex + 1))}
                   disabled={testimonialIndex === testimonials2025.length - 1}
                   className="p-1 border rounded disabled:opacity-50"
@@ -1170,7 +1104,7 @@ const OpenArtReviewClient = () => {
               </div>
             </div>
           </div>
-
+          
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center space-x-2">
@@ -1188,9 +1122,9 @@ const OpenArtReviewClient = () => {
                 <span className="text-sm text-gray-500">{testimonials2025[testimonialIndex].date}</span>
               </div>
             </div>
-            <p className="text-gray-700 italic">&ldquo;{testimonials2025[testimonialIndex].text}&rdquo;</p>
+            <p className="text-gray-700 italic">"{testimonials2025[testimonialIndex].text}"</p>
           </div>
-
+          
           <div className="mt-4 text-center">
             <span className="text-sm text-gray-500">
               Review {testimonialIndex + 1} of {testimonials2025.length} • All reviews from 2025 Trustpilot verified users
@@ -1207,7 +1141,7 @@ const OpenArtReviewClient = () => {
       {/* Purchase Recommendations */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Purchase Recommendations</h2>
-
+        
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-green-50 border border-green-200 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-green-800 mb-3">✅ Best For</h3>
@@ -1219,7 +1153,7 @@ const OpenArtReviewClient = () => {
               <li>• Small teams on budget</li>
             </ul>
           </div>
-
+          
           <div className="bg-red-50 border border-red-200 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-red-800 mb-3">❌ Skip If</h3>
             <ul className="text-red-700 text-sm space-y-2">
@@ -1230,7 +1164,7 @@ const OpenArtReviewClient = () => {
               <li>• Enterprise features needed</li>
             </ul>
           </div>
-
+          
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-blue-800 mb-3">🔄 Alternatives</h3>
             <ul className="text-blue-700 text-sm space-y-2">
@@ -1247,7 +1181,7 @@ const OpenArtReviewClient = () => {
       {/* Where to Buy */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Where to Get OpenArt AI</h2>
-
+        
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-blue-800 mb-3">Official Purchase Options</h3>
           <div className="space-y-3">
@@ -1256,22 +1190,22 @@ const OpenArtReviewClient = () => {
                 <span className="font-medium">OpenArt.ai Official Website</span>
                 <p className="text-sm text-gray-600">Direct from developer, full support</p>
               </div>
-              <a
-                href="https://openart.ai/home/?via=michael6m"
-                target="_blank"
+              <a 
+                href="https://openart.ai/" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
               >
                 Visit Site
               </a>
             </div>
-
+            
             <div className="bg-yellow-50 border border-yellow-200 p-3 rounded">
               <h4 className="font-semibold text-yellow-800 mb-1">⚠️ Important Notes:</h4>
               <ul className="text-yellow-700 text-sm space-y-1">
                 <li>• Start with free tier to test platform compatibility</li>
                 <li>• Monitor first month billing closely</li>
-                <li>• Avoid third-party sellers or &ldquo;group buy&rdquo; schemes</li>
+                <li>• Avoid third-party sellers or "group buy" schemes</li>
                 <li>• Official support only available for direct purchases</li>
               </ul>
             </div>
@@ -1282,54 +1216,52 @@ const OpenArtReviewClient = () => {
       {/* Final Verdict */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Final Verdict</h2>
-
+        
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 border rounded-lg p-6">
           <div className="flex items-center mb-4">
-            <div className="text-3xl font-bold text-blue-600 mr-4">4.3/5</div>
+            <div className="text-3xl font-bold text-blue-600 mr-4">3.2/5</div>
             <div>
-              <h3 className="text-lg font-semibold">Highly Recommended for Versatile Creators</h3>
+              <h3 className="text-lg font-semibold">Mixed Recommendation</h3>
               <div className="flex text-yellow-400">
                 {[1,2,3,4,5].map(star => (
-                  <span key={star} className={star <= 4 ? 'text-yellow-400' : 'text-gray-300'}>★</span>
+                  <span key={star} className={star <= 3 ? 'text-yellow-400' : 'text-gray-300'}>★</span>
                 ))}
               </div>
             </div>
           </div>
-
+          
           <div className="space-y-4">
             <p className="text-gray-700 leading-relaxed">
-              <strong>OpenArt AI stands out as a versatile, innovation-focused platform that unifies 15+ premium AI models with professional editing tools and unique video generation capabilities.</strong>
-              The $300+ yearly investment delivers exceptional value for creators who prioritize model variety and cutting-edge AI technology in one unified platform, eliminating the need for multiple subscriptions.
+              <strong>OpenArt AI offers impressive model variety and editing capabilities, but falls short on character consistency and subscription reliability.</strong> 
+              The $300+ yearly investment is only worthwhile for users who prioritize model diversity over consistency and can tolerate billing uncertainties.
             </p>
-
+            
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-semibold text-green-700 mb-2">Key Strengths:</h4>
                 <ul className="text-sm text-green-600 space-y-1">
-                  <li>• Extensive model library in one platform (15+ AI engines)</li>
-                  <li>• Innovative video generation with story templates</li>
-                  <li>• Comprehensive editing suite rivals standalone software</li>
-                  <li>• Regular feature updates with new models monthly</li>
-                  <li>• Flexible credit system for cost control</li>
+                  <li>• Extensive model library in one platform</li>
+                  <li>• Innovative video generation features</li>
+                  <li>• Comprehensive editing tools</li>
+                  <li>• Regular feature updates</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-blue-700 mb-2">Growth Areas:</h4>
-                <ul className="text-sm text-blue-600 space-y-1">
-                  <li>• FLUX Kontext actively evolving with updates</li>
-                  <li>• Credit system requires learning usage patterns</li>
-                  <li>• Documentation expanding with platform growth</li>
-                  <li>• Subscription follows standard industry practices</li>
+                <h4 className="font-semibold text-red-700 mb-2">Major Concerns:</h4>
+                <ul className="text-sm text-red-600 space-y-1">
+                  <li>• Inconsistent character generation</li>
+                  <li>• Subscription management issues</li>
+                  <li>• Credit system complexity</li>
+                  <li>• Reliability problems</li>
                 </ul>
               </div>
             </div>
-
+            
             <div className="bg-white p-4 rounded-lg border">
               <h4 className="font-semibold mb-2">Bottom Line:</h4>
               <p className="text-sm text-gray-700">
-                OpenArt AI is RECOMMENDED for content creators, social media managers, and digital artists who value versatility and innovation over single-engine specialization.
-                The generous free tier allows risk-free evaluation, while the Pro plan ($20/mo) offers outstanding value for creators wanting multiple premium AI models unified in one powerful platform.
-                For users specifically requiring studio-grade character consistency, Leonardo.ai or Midjourney may be better suited.
+                Start with the free tier to evaluate fit for your workflow. If character consistency is crucial for your projects, 
+                consider Leonardo.ai or Midjourney instead. For casual experimentation and variety, OpenArt's strengths may outweigh its limitations.
               </p>
             </div>
           </div>
@@ -1339,27 +1271,27 @@ const OpenArtReviewClient = () => {
       {/* Evidence Screenshots */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Evidence & Proof</h2>
-
+        
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <h3 className="text-lg font-semibold mb-3">Platform Screenshots</h3>
             <div className="space-y-4">
               <div>
-                <img
+                <img 
                   src="https://skywork-blog-image.oss-us-east-1.aliyuncs.com/wp-content/uploads/2025/09/10cfdb4fcb7648e381625a7359ee994f-1024x683.jpg"
                   alt="OpenArt AI interface showing image and video generation workspace"
                   className="w-full rounded-lg shadow-lg"
                 />
-                <p className="text-sm text-gray-600 mt-2">OpenArt AI&apos;s 2025 interface showing the integrated workspace for image and video generation</p>
+                <p className="text-sm text-gray-600 mt-2">OpenArt AI's 2025 interface showing the integrated workspace for image and video generation</p>
               </div>
             </div>
           </div>
-
+          
           <div>
             <h3 className="text-lg font-semibold mb-3">Character Consistency Examples</h3>
             <div className="space-y-4">
               <div>
-                <img
+                <img 
                   src="https://fal.ai/landing/flux-kontext/flux-kontext-consistent-character-editing.png"
                   alt="FLUX Kontext character consistency demonstration"
                   className="w-full rounded-lg shadow-lg"
@@ -1369,7 +1301,7 @@ const OpenArtReviewClient = () => {
             </div>
           </div>
         </div>
-
+        
         <div className="mt-6 bg-gray-50 p-4 rounded-lg border">
           <h4 className="font-semibold mb-2">Testing Data Summary</h4>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -1388,15 +1320,3 @@ const OpenArtReviewClient = () => {
           </div>
         </div>
       </section>
-
-      {/* Author Bio */}
-      <div className="mt-8">
-        <AuthorBio />
-      </div>
-
-      </div>
-    </div>
-  );
-};
-
-export default OpenArtReviewClient;

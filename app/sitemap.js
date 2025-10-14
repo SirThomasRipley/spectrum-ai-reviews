@@ -86,6 +86,12 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/affiliate-disclosure`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7, // Legal/compliance page
+    },
   ];
 
   // Service pages (main category pages)

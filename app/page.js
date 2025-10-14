@@ -164,20 +164,20 @@ export default function HomePage() {
             {/* Stats Row */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">500+</div>
-                <div className="text-sm font-semibold text-gray-700 mt-2">Reviews Published</div>
+                <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">1.3K+</div>
+                <div className="text-sm font-semibold text-gray-700 mt-2">Data Points Tested</div>
               </div>
               <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">10K+</div>
-                <div className="text-sm font-semibold text-gray-700 mt-2">Hours Testing</div>
-              </div>
-              <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">40+</div>
+                <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">200+</div>
                 <div className="text-sm font-semibold text-gray-700 mt-2">Hours Per Review</div>
               </div>
               <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">90-Day</div>
+                <div className="text-sm font-semibold text-gray-700 mt-2">Testing Periods</div>
+              </div>
+              <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">100%</div>
-                <div className="text-sm font-semibold text-gray-700 mt-2">Editorial Freedom</div>
+                <div className="text-sm font-semibold text-gray-700 mt-2">Affiliate Transparent</div>
               </div>
             </div>
           </header>
@@ -739,8 +739,8 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Real User Insights</h3>
                 <div className="text-center mb-4">
-                  <div className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-500 mb-2">10K+</div>
-                  <div className="text-sm font-semibold text-gray-600">User Data Points</div>
+                  <div className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-500 mb-2">100%</div>
+                  <div className="text-sm font-semibold text-gray-600">Verified Sources</div>
                 </div>
                 <p className="text-gray-600 text-center leading-relaxed">
                   Our reviews incorporate feedback from verified users and industry professionals
@@ -962,20 +962,20 @@ export default function HomePage() {
             {/* Stats Row */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <div className="text-4xl font-extrabold mb-2">500+</div>
-                <div className="text-sm opacity-90">Reviews</div>
+                <div className="text-4xl font-extrabold mb-2">1.3K+</div>
+                <div className="text-sm opacity-90">Data Points</div>
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <div className="text-4xl font-extrabold mb-2">10K+</div>
-                <div className="text-sm opacity-90">Hours Testing</div>
+                <div className="text-4xl font-extrabold mb-2">200+</div>
+                <div className="text-sm opacity-90">Hours Per Review</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                <div className="text-4xl font-extrabold mb-2">90-Day</div>
+                <div className="text-sm opacity-90">Testing Periods</div>
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
                 <div className="text-4xl font-extrabold mb-2">100%</div>
-                <div className="text-sm opacity-90">Unbiased</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <div className="text-4xl font-extrabold mb-2">24/7</div>
-                <div className="text-sm opacity-90">Updated</div>
+                <div className="text-sm opacity-90">Transparent</div>
               </div>
             </div>
           </div>

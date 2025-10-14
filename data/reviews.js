@@ -419,6 +419,123 @@ export const reviews = [
     articlesGenerated: '150+',
   },
 
+  {
+    // Basic Information
+    title: 'OpenArt AI',
+    slug: 'openart',
+
+    // Classification
+    service: 'ai-art-generator-reviews', // Must match service slug from content.js
+    category: 'content-creation', // Must match category slug from content.js
+
+    // Rating & Scoring
+    rating: 3.2,
+    displayRating: '3.2/5', // Based on extensive testing
+    reviewCount: '1',
+
+    // Summary
+    summary: 'Multi-model AI art platform aggregating 15+ AI engines including FLUX, Imagen, and SDXL. Offers image and video generation with built-in editing tools, but struggles with character consistency.',
+
+    // Detailed Assessment
+    pros: [
+      'Access to 15+ AI models (FLUX, Imagen, SDXL) in one platform',
+      'Comprehensive editing suite eliminates need for external software',
+      'Innovative video generation with one-click story templates',
+      'Generous free tier with substantial credits for testing',
+      'Regular updates with new models and features',
+      'Built-in upscaling, inpainting, and background removal tools',
+    ],
+    cons: [
+      'Character consistency issues even with FLUX Kontext model',
+      'Multiple reports of subscription management and billing problems',
+      'Complex credit system makes cost prediction difficult',
+      'Video generations can fail or get stuck without completion',
+      'Pricing information scattered across multiple pages',
+      'Limited documentation for advanced features',
+    ],
+
+    // Pricing
+    price: {
+      free: {
+        cost: 0,
+        period: 'forever',
+        features: ['Limited daily credits', 'Basic models (SDXL)', '512×512 resolution', '25 steps max', 'Public generations'],
+      },
+      starter: {
+        name: 'Essential',
+        cost: 7,
+        period: 'month',
+        annualCost: 84,
+        features: ['4,000 monthly credits', 'All basic models', 'Higher resolution', 'Private generations', 'Priority support'],
+      },
+      pro: {
+        name: 'Pro',
+        cost: 20,
+        period: 'month',
+        annualCost: 240,
+        features: ['12,000 monthly credits', 'Premium models', 'FLUX Kontext access', 'Video generation', 'Custom model training'],
+      },
+      enterprise: {
+        name: 'Studio',
+        cost: 40,
+        period: 'month',
+        annualCost: 480,
+        features: ['25,000 monthly credits', 'All premium features', 'Team collaboration', 'API access', 'Advanced editing tools'],
+      },
+    },
+
+    // Best For
+    bestFor: [
+      'Content creators wanting access to multiple AI models',
+      'Users needing variety over consistency',
+      'Video generation enthusiasts experimenting with AI',
+      'Beginners learning AI art generation',
+      'Small teams needing collaborative features',
+    ],
+
+    // Not Recommended For
+    notFor: [
+      'Professional studios requiring consistent character generation',
+      'Users needing predictable, transparent billing',
+      'Enterprise teams requiring SLAs and reliability guarantees',
+      'High-volume production workflows',
+      'Users uncomfortable with subscription management issues',
+    ],
+
+    // Key Features
+    keyFeatures: [
+      '15+ AI models (FLUX, Imagen, SDXL, DALL-E)',
+      'Video generation up to 60 seconds',
+      'FLUX Kontext for character consistency',
+      'Built-in editing suite (inpainting, upscaling)',
+      'Character model training capabilities',
+      'Story templates and brain rot video creation',
+    ],
+
+    // Performance Metrics
+    performance: {
+      successRate: '78%',
+      imageQuality: '78/100',
+      characterConsistency: '60/100',
+      videoQuality: '80/100',
+    },
+
+    // Display Options
+    featured: false,
+    badge: 'Multi-Model Platform',
+
+    // Links
+    reviewUrl: '/reviews/ai-art-generators/content-creation/openart',
+    affiliateUrl: 'https://openart.ai/home/?via=michael6m',
+
+    // Metadata
+    lastUpdated: '2025-10-13',
+    author: 'Michael Anderson',
+    testingPeriod: '6 months',
+    imagesGenerated: '500+',
+    videosCreated: '50+',
+  },
+
   // Add more reviews here following the same structure
   // Example template (commented out):
   /*

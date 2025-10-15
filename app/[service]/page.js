@@ -2,6 +2,7 @@ import { services, categories } from '../../data/content';
 import { getReviewsByService } from '../../data/reviews';
 import Link from 'next/link';
 import Icon from '../../components/Icon';
+import Script from 'next/script';
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -13,9 +14,18 @@ export async function generateMetadata({ params }) {
   const service = services.find(s => s.slug === params.service);
 
   return {
-    title: `${service.name} | SpectrumAIReviews`,
-    description: service.description,
+    title: `${service.name} | SpectrumAIReviews - Expert Reviews & Comparisons`,
+    description: `${service.description}. Expert reviews, ratings, and comparisons of the best ${service.name.toLowerCase()} in 2025. Find the perfect tool for your needs.`,
     keywords: service.keywords,
+    openGraph: {
+      title: `${service.name} Reviews & Comparisons 2025`,
+      description: service.description,
+      type: 'website',
+      url: `https://spectrumaireviews.com/${params.service}`,
+    },
+    alternates: {
+      canonical: `https://spectrumaireviews.com/${params.service}`,
+    },
   };
 }
 
@@ -37,8 +47,98 @@ export default function ServicePage({ params }) {
     }
   });
 
+  // CollectionPage schema for SEO
+  const collectionPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: service.name,
+    description: service.description,
+    url: `https://spectrumaireviews.com/${params.service}`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: serviceReviews.length,
+      itemListElement: serviceReviews.slice(0, 10).map((review, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Article',
+          name: `${review.title} Review`,
+          url: `https://spectrumaireviews.com${review.reviewUrl}`,
+          headline: `${review.title} Review 2025`,
+          description: review.summary,
+          author: {
+            '@type': 'Person',
+            name: 'Michael Anderson',
+          },
+        },
+      })),
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://spectrumaireviews.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: service.name,
+          item: `https://spectrumaireviews.com/${params.service}`,
+        },
+      ],
+    },
+  };
+
+  // FAQ Schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `What is the best ${service.name.toLowerCase()}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: serviceReviews.length > 0
+            ? `Based on our testing, ${serviceReviews[0].title} ranks highest with a ${serviceReviews[0].displayRating} rating for overall quality and value.`
+            : `We are currently evaluating ${service.name.toLowerCase()}. Check back soon for our recommendations!`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `How much do ${service.name.toLowerCase()} typically cost?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Pricing varies widely, from free tiers to enterprise solutions. Most tools offer monthly subscriptions ranging from $10 to $100+ depending on features and usage limits.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Are there free ${service.name.toLowerCase()} available?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, many tools offer free plans with limited features. These are great for testing and small-scale use before committing to a paid plan.',
+        },
+      },
+    ],
+  };
+
   return (
-    <div className="container mx-auto px-4 py-16 space-y-16">
+    <>
+      <Script
+        id="collection-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="container mx-auto px-4 py-16 space-y-16">
       <header className="text-center max-w-3xl mx-auto">
         <Icon name={service.icon} className="w-16 h-16 text-primary mx-auto mb-4" />
         <h1 className="text-5xl font-bold font-display">{service.name}</h1>
@@ -221,6 +321,7 @@ export default function ServicePage({ params }) {
           </div>
         </section>
       )}
-    </div>
+      </div>
+    </>
   );
 }

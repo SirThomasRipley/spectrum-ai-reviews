@@ -71,26 +71,26 @@ export default function sitemap() {
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9, // Hub page - defers to money pages (reviews)
+      changeFrequency: 'daily', // Homepage updates frequently with new reviews
+      priority: 0.95, // High priority hub page
     },
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/methodology`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/affiliate-disclosure`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7, // Legal/compliance page
+      priority: 0.5, // Legal/compliance page
     },
   ];
 
@@ -99,7 +99,7 @@ export default function sitemap() {
     url: `${baseUrl}/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.9,
+    priority: 0.85, // High priority category pages
   }));
 
   // Category pages (service + category combinations)

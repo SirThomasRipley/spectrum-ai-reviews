@@ -156,7 +156,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Preconnect to critical domains for Core Web Vitals */}
+
+        {/* Critical resource hints for Core Web Vitals */}
+        {/* Preconnect to critical domains (establishes early connection) */}
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
@@ -167,8 +169,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           crossOrigin="anonymous"
         />
         <link
+          rel="preconnect"
+          href="https://www.googletagmanager.com"
+        />
+
+        {/* DNS prefetch for additional performance */}
+        <link
           rel="dns-prefetch"
           href="https://www.googletagmanager.com"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://www.google-analytics.com"
+        />
+
+        {/* Preload critical fonts for LCP optimization */}
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        {/* Resource hint for Cloudflare CDN */}
+        <link
+          rel="dns-prefetch"
+          href="https://spectrumaireviews.com"
         />
         <Script
           id="organization-schema"

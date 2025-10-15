@@ -15,6 +15,8 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year cache for images
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: false, // Ensure image optimization is enabled
+    loader: 'default',
   },
 
   // Performance optimizations
@@ -47,7 +49,7 @@ const nextConfig = {
     return config;
   },
 
-  // Headers configuration
+  // Headers configuration for SEO and performance
   async headers() {
     return [
       {
@@ -60,6 +62,49 @@ const nextConfig = {
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=63072000; includeSubDomains; preload'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
+          },
+        ],
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
           },
         ],
       },
@@ -85,6 +130,10 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
     scrollRestoration: true,
+    // Enable server actions for better interactivity
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
   },
 
   // Compiler optimizations for better performance

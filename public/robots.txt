@@ -1,24 +1,145 @@
 # Robots.txt for SpectrumAIReviews.com
-# Allow all search engines to crawl the site
+# Optimized for maximum SEO performance and crawl efficiency
 
+# ============================================
+# GLOBAL DIRECTIVES (All Search Engines)
+# ============================================
 User-agent: *
+
+# Allow all content pages
 Allow: /
+Allow: /reviews/
+Allow: /ai-writing-tool-reviews
+Allow: /ai-art-generator-reviews
+Allow: /ai-seo-tool-reviews
+Allow: /ai-assistant-agent-reviews
+Allow: /about
+Allow: /methodology
+Allow: /affiliate-disclosure
+
+# Block technical and admin paths
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: *.json$
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*source=
 
-# Specific directives for major search engines
+# Block duplicate content patterns
+Disallow: /*?page=
+Disallow: /*?sort=
+Disallow: /*?filter=
+
+# Allow CSS and JS for proper rendering (important for Google)
+Allow: /*.css
+Allow: /*.js
+
+# ============================================
+# GOOGLEBOT SPECIFIC
+# ============================================
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
+Request-rate: 1/1
 
+# Allow Googlebot to crawl all images
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
+Allow: /*.svg
+
+# ============================================
+# BINGBOT SPECIFIC
+# ============================================
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 0
+Request-rate: 1/1
 
+# ============================================
+# OTHER MAJOR SEARCH ENGINES
+# ============================================
+
+# Yahoo (Slurp)
 User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
 Allow: /
 Crawl-delay: 0
 
-# Sitemap location
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Baidu (Chinese search engine)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# ============================================
+# AI CRAWLERS (For LLM Training & AI Search)
+# ============================================
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+# Google Bard/Gemini
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 0
+
+# Common Crawl (Web Archive)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+# ============================================
+# BLOCK BAD BOTS & SCRAPERS
+# ============================================
+
+# Block aggressive scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Block content scrapers
+User-agent: SurveyBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# ============================================
+# SITEMAP LOCATIONS
+# ============================================
 Sitemap: https://spectrumaireviews.com/sitemap.xml
+
+# Host directive (for search engines that support it)
+Host: https://spectrumaireviews.com

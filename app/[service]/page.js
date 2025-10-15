@@ -47,96 +47,28 @@ export default function ServicePage({ params }) {
     }
   });
 
-  // CollectionPage schema for SEO
-  const collectionPageSchema = {
+  // ✅ MINIMAL SCHEMA: WebPage only (no ItemList, no Breadcrumb, no FAQ)
+  // Reason: Prevents schema conflicts with homepage ItemList and review page breadcrumbs
+  // Service pages are category/hub pages - they don't need heavy schema markup
+  const servicePageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
+    '@type': 'WebPage',
     name: service.name,
     description: service.description,
     url: `https://spectrumaireviews.com/${params.service}`,
-    mainEntity: {
-      '@type': 'ItemList',
-      numberOfItems: serviceReviews.length,
-      itemListElement: serviceReviews.slice(0, 10).map((review, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: {
-          '@type': 'Article',
-          name: `${review.title} Review`,
-          url: `https://spectrumaireviews.com${review.reviewUrl}`,
-          headline: `${review.title} Review 2025`,
-          description: review.summary,
-          author: {
-            '@type': 'Person',
-            name: 'Michael Anderson',
-          },
-        },
-      })),
+    about: {
+      '@type': 'Thing',
+      name: service.name,
+      description: service.description,
     },
-    breadcrumb: {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://spectrumaireviews.com',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: service.name,
-          item: `https://spectrumaireviews.com/${params.service}`,
-        },
-      ],
-    },
-  };
-
-  // FAQ Schema
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `What is the best ${service.name.toLowerCase()}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: serviceReviews.length > 0
-            ? `Based on our testing, ${serviceReviews[0].title} ranks highest with a ${serviceReviews[0].displayRating} rating for overall quality and value.`
-            : `We are currently evaluating ${service.name.toLowerCase()}. Check back soon for our recommendations!`,
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `How much do ${service.name.toLowerCase()} typically cost?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Pricing varies widely, from free tiers to enterprise solutions. Most tools offer monthly subscriptions ranging from $10 to $100+ depending on features and usage limits.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `Are there free ${service.name.toLowerCase()} available?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, many tools offer free plans with limited features. These are great for testing and small-scale use before committing to a paid plan.',
-        },
-      },
-    ],
   };
 
   return (
     <>
       <Script
-        id="collection-schema"
+        id="service-page-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicePageSchema) }}
       />
       <div className="container mx-auto px-4 py-16 space-y-16">
       <header className="text-center max-w-3xl mx-auto">

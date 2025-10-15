@@ -71,8 +71,8 @@ export default function sitemap() {
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'daily', // Homepage updates frequently with new reviews
-      priority: 0.95, // High priority hub page
+      changeFrequency: 'weekly', // ✅ FIXED: Homepage stable, updates weekly not daily
+      priority: 0.7, // ✅ FIXED: Clear gap from review pages (1.0) - homepage is gateway, not money page
     },
     {
       url: `${baseUrl}/about`,
@@ -99,7 +99,7 @@ export default function sitemap() {
     url: `${baseUrl}/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.85, // High priority category pages
+    priority: 0.9, // ✅ FIXED: Raised to 0.9 - critical navigation hubs linking to reviews
   }));
 
   // Category pages (service + category combinations)
@@ -109,8 +109,8 @@ export default function sitemap() {
       categoryPages.push({
         url: `${baseUrl}/${service.slug}/${category.slug}`,
         lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.8,
+        changeFrequency: 'monthly', // ✅ FIXED: Less frequent - not constantly changing
+        priority: 0.6, // ✅ FIXED: Lowered - many empty pages, less important
       });
     });
   });

@@ -17,23 +17,18 @@ Allow: /about
 Allow: /methodology
 Allow: /affiliate-disclosure
 
-# Block technical and admin paths
+# Block technical and admin paths ONLY
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
-Disallow: *.json$
-Disallow: /*?*utm_
-Disallow: /*?*ref=
-Disallow: /*?*source=
-
-# Block duplicate content patterns
-Disallow: /*?page=
-Disallow: /*?sort=
-Disallow: /*?filter=
 
 # Allow CSS and JS for proper rendering (important for Google)
 Allow: /*.css
 Allow: /*.js
+
+# ✅ REMOVED parameter blocking (lines 24-32) to prevent soft 404s
+# Note: Canonical tags handle duplicate content better than robots.txt blocking
+# Blocking URL parameters can cause soft 404s if Google has indexed URLs with these params
 
 # ============================================
 # GOOGLEBOT SPECIFIC
@@ -113,18 +108,18 @@ Crawl-delay: 2
 # BLOCK BAD BOTS & SCRAPERS
 # ============================================
 
-# Block aggressive scrapers
+# ✅ FIXED: Throttle instead of block for SEO tool bots (important for backlink signals)
 User-agent: AhrefsBot
-Disallow: /
+Crawl-delay: 5
 
 User-agent: SemrushBot
-Crawl-delay: 10
+Crawl-delay: 5
 
 User-agent: MJ12bot
-Crawl-delay: 10
+Crawl-delay: 5
 
 User-agent: DotBot
-Crawl-delay: 10
+Crawl-delay: 5
 
 # Block content scrapers
 User-agent: SurveyBot

@@ -1,0 +1,154 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    SOCIAL SHARING IMAGES - QUICK REFERENCE                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📐 TECHNICAL SPECS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Dimensions:  1200 × 630 pixels (exact, no exceptions)
+Format:      JPG (preferred) or PNG
+File Size:   < 500KB (< 300KB ideal)
+Quality:     80-85% for JPG
+Resolution:  72 DPI
+
+
+🎨 BRAND COLORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary Purple:   #6A0DAD
+Secondary Blue:   #3B82F6
+Accent Pink:      #EC4899
+Text Dark:        #1F2937
+
+
+📝 TYPOGRAPHY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Product Name:    Poppins Bold, 96px, top left
+Subtitle:        Inter SemiBold, 48px
+Rating:          60-72px (stars + number)
+Hook:            Inter Medium, 48px
+Branding:        Inter SemiBold, 32px, bottom right, 70% opacity
+
+
+📦 LAYOUT COMPONENTS (Required)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Background gradient (product category color)
+2. Product name "Zebracat Review 2025" (96px, top left)
+3. Rating stars ⭐⭐⭐⭐☆ 4.2/5 (60-72px, center)
+4. Hook text "127 Videos Tested" (48px, below rating)
+5. Branding "SpectrumAIReviews" (32px, bottom right, 70% opacity)
+6. Optional: Icon 🎬🤖✍️🎨 (120px, top right)
+
+
+🎯 GRADIENTS BY CATEGORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AI Writing Tools:    Green (#10B981) → Blue (#3B82F6)
+AI Art Generators:   Purple (#6A0DAD) → Blue (#3B82F6)
+AI SEO Tools:        Orange (#F97316) → Red (#EF4444)
+AI Assistants:       Blue (#3B82F6) → Indigo (#6366F1)
+
+
+📊 MISSING IMAGES (12 TOTAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚨 HIGH PRIORITY (This Week)
+[ ] og-image.png + twitter-image.png (homepage)
+[ ] zebracat-review-og.jpg + zebracat-review-twitter.jpg
+[ ] genspark-review-og.jpg + genspark-review-twitter.jpg
+[ ] getgenie-review-og.jpg + getgenie-review-twitter.jpg
+
+🔶 MEDIUM PRIORITY (This Month)
+[ ] cognitia-review-og.jpg + cognitia-review-twitter.jpg
+[ ] openart-review-og.jpg + openart-review-twitter.jpg
+
+
+🛠️ TOOLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Design:      Canva (canva.com) - FREE, beginner-friendly
+Optimize:    TinyPNG (tinypng.com) - FREE, 50-80% compression
+Test:        OpenGraph Debugger (opengraph.xyz) - FREE
+             Twitter Card Validator (cards-dev.twitter.com/validator) - FREE
+
+
+⚡ QUICK WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Canva → Create 1200×630 design (15 min)
+2. Add gradient, text, rating, branding
+3. Export as JPG (standard quality)
+4. TinyPNG → Compress to < 500KB (5 min)
+5. Save to /public/images/ (1 min)
+6. Test with OpenGraph debugger (3 min)
+7. Git add, commit, push (2 min)
+
+⏱️ Total Time: 30 min (first), 20 min (subsequent)
+
+
+✅ QUALITY CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ] Dimensions: 1200×630 exact
+[ ] File size: < 500KB
+[ ] Text readable at thumbnail (200px wide)
+[ ] High contrast text/background
+[ ] Product name largest element
+[ ] Rating visible (stars + number)
+[ ] Hook text attention-grabbing
+[ ] Branding subtle (bottom right)
+[ ] Optimized with TinyPNG
+[ ] Tested in debuggers
+[ ] Committed to git
+
+
+🚨 COMMON MISTAKES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ Wrong dimensions (1920×1080, 1200×600)
+❌ File too large (>1MB)
+❌ Text too small (< 48px)
+❌ Low contrast (white on light gradient)
+❌ No branding
+❌ Not optimized (3MB PNG)
+
+
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK_START.md              → 30-min beginner tutorial (Zebracat example)
+IMAGE_CREATION_GUIDE.md     → Detailed step-by-step (Canva, Figma, Placid)
+IMAGE_REQUIREMENTS.md       → Complete technical specifications
+MISSING_IMAGES_TRACKER.md   → Progress tracking (update as you go)
+README.md                   → Overview and quick reference
+
+
+💡 PRO TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Save Canva designs for future edits
+• Create template → duplicate for other reviews
+• Batch create all images in one session
+• Use Canva brand kit for consistency
+• Test at thumbnail size before exporting
+
+
+📈 EXPECTED IMPACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Before:  ❌ No preview images, low CTR, unprofessional
+After:   ✅ Professional cards, +20-40% CTR, +100-200 monthly visits
+
+Investment: 3-4 hours total → Hundreds of monthly clicks
+
+
+🎯 NEXT STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Read QUICK_START.md for first image walkthrough
+2. Create homepage fallback (og-image.png + twitter-image.png)
+3. Create Zebracat images (highest priority featured review)
+4. Create Genspark images
+5. Create GetGenie images
+6. Update MISSING_IMAGES_TRACKER.md as you complete each
+
+
+⚠️ IMPORTANT: .GITIGNORE ISSUE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The .gitignore has "*.md" which prevents markdown files from being tracked.
+Solution: git add -f public/images/*.md
+See GITIGNORE_NOTE.txt for full details.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+Last Updated: October 17, 2025
+Ready to start? Read QUICK_START.md and create your first image! 🚀
+═══════════════════════════════════════════════════════════════════════════════

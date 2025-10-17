@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AuthorBio from '@/components/AuthorBio';
-import RelatedReviews from '@/components/RelatedReviews';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { linkMap } from '@/utils/linkMap';
 import Emoji from '@/components/Emoji';
@@ -240,10 +239,10 @@ const ZebracatReview = () => {
 
               {/* Interface Screenshot */}
               <div className="rounded-xl overflow-hidden shadow-lg mb-8">
-                <Image width={1200} height={675}
+                <img
                   src="https://cdn.prod.website-files.com/653c03c7c53a2bcd281723b3/673dd096aa659fe6e769ced5_673dcf9591e9a99494a91b04_image19.webp"
                   alt="Zebracat Interface Screenshot"
-                  className="w-full h-auto" unoptimized={true}
+                  className="w-full h-auto"
                 />
                 <p className="text-sm text-gray-500 text-center p-3 bg-gray-50">
                   Zebracat&apos;s clean interface showing the main video creation dashboard
@@ -358,10 +357,10 @@ const ZebracatReview = () => {
 
               {/* Customization Interface Image */}
               <div className="rounded-xl overflow-hidden shadow-lg mb-8">
-                <Image width={1200} height={675}
+                <img
                   src="https://cdn.prod.website-files.com/653c03c7c53a2bcd281723b3/673dad97000529a0dfcc3390_673dad36a9523a1164bcc705_video%2520type%2520full%2520screen.webp"
                   alt="Zebracat Customization Interface"
-                  className="w-full h-auto" unoptimized={true}
+                  className="w-full h-auto"
                 />
                 <p className="text-sm text-gray-500 text-center p-3 bg-gray-50">
                   The intuitive customization interface allows for quick brand adjustments
@@ -532,10 +531,10 @@ const ZebracatReview = () => {
 
               {/* Marketing Interface Image */}
               <div className="rounded-xl overflow-hidden shadow-lg mt-8">
-                <Image width={1200} height={675}
+                <img
                   src="https://cdn.analyticsvidhya.com/wp-content/uploads/2024/03/Screenshot-131.png"
                   alt="Zebracat Marketing Interface"
-                  className="w-full h-auto" unoptimized={true}
+                  className="w-full h-auto"
                 />
                 <p className="text-sm text-gray-500 text-center p-3 bg-gray-50">
                   Marketing-focused features make campaign creation effortless
@@ -2155,10 +2154,10 @@ const ZebracatReview = () => {
 
               {/* Features Overview Image */}
               <div className="rounded-xl overflow-hidden shadow-lg mb-8">
-                <Image width={1200} height={675}
+                <img
                   src="https://bestfreeaitools.io/wp-content/uploads/2025/09/Zebracat-AI-Text-to-Video-Generator-with-AI-Features-Screenshot-by-bestfreeaitools-Teams.webp"
                   alt="Zebracat Features Overview"
-                  className="w-full h-auto" unoptimized={true}
+                  className="w-full h-auto"
                 />
                 <p className="text-sm text-gray-500 text-center p-3 bg-gray-50">
                   Complete feature set tested during our three-month evaluation period
@@ -2182,14 +2181,6 @@ const ZebracatReview = () => {
                 </p>
               </div>
             </section>
-
-            {/* Related Reviews */}
-            <RelatedReviews
-              currentSlug="zebracat"
-              service="ai-art-generator-reviews"
-              category="content-creation"
-              limit={3}
-            />
 
             {/* Author Bio */}
             <div className="mt-8">

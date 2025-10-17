@@ -30,6 +30,31 @@ export async function generateMetadata({ params }) {
     title,
     description,
     keywords,
+    authors: [{ name: 'Michael Anderson', url: 'https://spectrumaireviews.com/about' }],
+    openGraph: {
+      title: `Best ${service.name} for ${category.name} 2025`,
+      description: `${category.description} Discover top-rated ${service.name.toLowerCase()} with expert reviews and comparisons.`,
+      url: `https://spectrumaireviews.com/${params.service}/${params.category}`,
+      siteName: 'SpectrumAIReviews',
+      locale: 'en_US',
+      type: 'website',
+      images: [{
+        url: `https://spectrumaireviews.com/images/${params.service}-${params.category}-og.jpg`,
+        width: 1200,
+        height: 630,
+        alt: `Best ${service.name} for ${category.name}`,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Best ${service.name} for ${category.name} 2025`,
+      description: `${category.description} Expert reviews and rankings.`,
+      images: [`https://spectrumaireviews.com/images/${params.service}-${params.category}-twitter.jpg`],
+      creator: '@SpectrumAIReview',
+    },
+    alternates: {
+      canonical: `https://spectrumaireviews.com/${params.service}/${params.category}`,
+    },
   };
 }
 

@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import AuthorBio from '@/components/AuthorBio';
+import RelatedReviews from '@/components/RelatedReviews';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { linkMap } from '@/utils/linkMap';
 import Emoji from '@/components/Emoji';
@@ -344,7 +346,7 @@ const OpenArtReviewClient = () => {
               </div>
 
               <div>
-                <img
+                <NextImage width={380} height={400} unoptimized={true}
                   src="https://images.saasworthy.com/tr:w-380,h-0,c-at_max,e-sharpen-1/openart_46157_pricing-yearly-screenshot_1754983948_bxrlb.png"
                   alt="OpenArt AI Dashboard Interface 2025"
                   className="w-full rounded-lg shadow-lg mb-3"
@@ -462,7 +464,7 @@ const OpenArtReviewClient = () => {
             </h2>
 
             <div className="mb-6">
-              <img
+              <NextImage width={1280} height={720} unoptimized={true}
                 src="https://i.ytimg.com/vi/Q8ZmKIzMxaM/maxresdefault.jpg"
                 alt="FLUX Kontext Character Consistency Example"
                 className="w-full rounded-lg shadow-lg mb-3"
@@ -1345,7 +1347,7 @@ const OpenArtReviewClient = () => {
             <h3 className="text-lg font-semibold mb-3">Platform Screenshots</h3>
             <div className="space-y-4">
               <div>
-                <img
+                <NextImage width={1024} height={683} unoptimized={true}
                   src="https://skywork-blog-image.oss-us-east-1.aliyuncs.com/wp-content/uploads/2025/09/10cfdb4fcb7648e381625a7359ee994f-1024x683.jpg"
                   alt="OpenArt AI interface showing image and video generation workspace"
                   className="w-full rounded-lg shadow-lg"
@@ -1359,7 +1361,7 @@ const OpenArtReviewClient = () => {
             <h3 className="text-lg font-semibold mb-3">Character Consistency Examples</h3>
             <div className="space-y-4">
               <div>
-                <img
+                <NextImage width={1200} height={675} unoptimized={true}
                   src="https://fal.ai/landing/flux-kontext/flux-kontext-consistent-character-editing.png"
                   alt="FLUX Kontext character consistency demonstration"
                   className="w-full rounded-lg shadow-lg"
@@ -1388,6 +1390,14 @@ const OpenArtReviewClient = () => {
           </div>
         </div>
       </section>
+
+      {/* Related Reviews */}
+      <RelatedReviews
+        currentSlug="openart"
+        service="ai-art-generator-reviews"
+        category="content-creation"
+        limit={3}
+      />
 
       {/* Author Bio */}
       <div className="mt-8">

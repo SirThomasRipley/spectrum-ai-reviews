@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import AuthorBio from '@/components/AuthorBio';
+import RelatedReviews from '@/components/RelatedReviews';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { linkMap } from '@/utils/linkMap';
 import Emoji from '@/components/Emoji';
 import {
-  Zap, Star, Globe, Image, BarChart3, MessageSquare, ShoppingCart,
+  Zap, Star, Globe, Image as ImageIcon, BarChart3, MessageSquare, ShoppingCart,
   ExternalLink, Play, TrendingUp, Info, CheckCircle, XCircle,
   ChevronDown, ChevronUp
 } from 'lucide-react';
@@ -417,13 +419,14 @@ const GetGenieReview = () => {
                     Here&apos;s what the GetGenie dashboard looks like directly inside your WordPress editor. This screenshot demonstrates the seamless integration we tested during our 3-month review period.
                   </p>
                   <div className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-white">
-                    <img
+                    <NextImage
+                      width={1024}
+                      height={382}
                       src="https://getgenie.ai/wp-content/uploads/2022/08/Getting-Started-with-GetGenie-1-1024x382.png"
                       alt="GetGenie WordPress plugin dashboard showing SEO optimization features, content analysis tools, and keyword research interface integrated directly into WordPress editor"
-                      width="1024"
-                      height="382"
                       className="w-full h-auto"
                       loading="eager"
+                      unoptimized={true}
                     />
                     <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                       Verified Real Screenshot
@@ -471,7 +474,7 @@ const GetGenieReview = () => {
               {/* Feature 1: Genie Image */}
               <div className="mb-12">
                 <FeatureCard
-                  icon={<Image className="w-6 h-6 text-blue-600" />}
+                  icon={<ImageIcon className="w-6 h-6 text-blue-600" />}
                   title="Genie Image - AI Image Generator"
                   description="WordPress-integrated AI image generation tool with DALL-E 2 technology, offering seamless media library integration and high-definition output capabilities."
                   rankingScore="9"
@@ -544,13 +547,14 @@ const GetGenieReview = () => {
                     This is the actual SERP visualization tool we used to analyze competitor content during our testing. The head-to-head comparison feature saved us approximately 4 hours per article in manual research.
                   </p>
                   <div className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-white">
-                    <img
+                    <NextImage
+                      width={1024}
+                      height={830}
                       src="https://getgenie.ai/wp-content/uploads/2025/05/feature_ai_magic_images_40-1024x830.webp"
                       alt="GetGenie SERP analysis interface showing head-to-head competitor comparison, keyword density analysis, content scoring metrics, and real-time search engine results visualization"
-                      width="1024"
-                      height="830"
                       className="w-full h-auto"
                       loading="lazy"
+                      unoptimized={true}
                     />
                     <div className="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                       Tested Feature
@@ -1200,6 +1204,14 @@ const GetGenieReview = () => {
                 </p>
               </div>
             </section>
+
+            {/* Related Reviews */}
+            <RelatedReviews
+              currentSlug="getgenie"
+              service="ai-writing-tool-reviews"
+              category="content-creation"
+              limit={3}
+            />
 
             {/* AUTHOR BIO */}
             <div className="mt-8">

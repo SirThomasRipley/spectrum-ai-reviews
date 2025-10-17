@@ -56,7 +56,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-site-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
 };
 

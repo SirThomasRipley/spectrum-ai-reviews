@@ -8,7 +8,83 @@ const nextConfig = {
 
   // Image optimization - 2025 Core Web Vitals best practices
   images: {
-    domains: ['localhost', 'spectrumaireviews.com', 'your-domain.pages.dev'],
+    // Modern remotePatterns for external CDN images (Next.js 14+)
+    remotePatterns: [
+      // Local and own domain images
+      {
+        protocol: 'https',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
+        hostname: 'spectrumaireviews.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'your-domain.pages.dev',
+      },
+      // External CDN domains for review images
+      {
+        protocol: 'https',
+        hostname: 'getgenie.ai',
+        pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.prod.website-files.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.analyticsvidhya.com',
+        pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'bestfreeaitools.io',
+        pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.cognitia-ai.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'substackcdn.com',
+        pathname: '/image/fetch/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'substack-post-media.s3.amazonaws.com',
+        pathname: '/public/images/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'skywork-blog-image.oss-us-east-1.aliyuncs.com',
+        pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'is1-ssl.mzstatic.com',
+        pathname: '/image/thumb/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.saasworthy.com',
+        pathname: '/tr:*/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        pathname: '/vi/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'fal.ai',
+        pathname: '/landing/**',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],

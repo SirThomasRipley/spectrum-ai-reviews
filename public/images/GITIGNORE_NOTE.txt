@@ -1,0 +1,104 @@
+IMPORTANT: .gitignore Configuration Note
+==========================================
+
+Date: October 17, 2025
+
+ISSUE DETECTED:
+The project's .gitignore file currently contains:
+    # markdown documentation files
+    *.md
+
+This line will PREVENT all markdown (.md) files from being tracked in git, including the important documentation files in this directory:
+- README.md
+- IMAGE_REQUIREMENTS.md
+- IMAGE_CREATION_GUIDE.md
+- MISSING_IMAGES_TRACKER.md
+- QUICK_START.md
+
+SOLUTION OPTIONS:
+
+Option 1: Remove the *.md line from .gitignore (Recommended)
+-------------------------------------------------------------
+Edit /.gitignore and remove or comment out this line:
+    # markdown documentation files
+    # *.md    <-- Comment this out
+
+Then add the files:
+    git add public/images/*.md
+    git commit -m "Add social images documentation"
+
+
+Option 2: Force-add despite .gitignore
+---------------------------------------
+Keep .gitignore as-is but force-add these specific files:
+    git add -f public/images/README.md
+    git add -f public/images/IMAGE_REQUIREMENTS.md
+    git add -f public/images/IMAGE_CREATION_GUIDE.md
+    git add -f public/images/MISSING_IMAGES_TRACKER.md
+    git add -f public/images/QUICK_START.md
+    git commit -m "Add social images documentation (force-added)"
+
+
+Option 3: Add exception in .gitignore
+--------------------------------------
+Add this BEFORE the *.md line in .gitignore:
+    # Exception: Allow markdown files in public/images/
+    !public/images/*.md
+
+    # markdown documentation files
+    *.md
+
+
+VERIFICATION:
+
+After implementing one of the solutions, verify the files are tracked:
+    git status
+
+You should see:
+    new file:   public/images/README.md
+    new file:   public/images/IMAGE_REQUIREMENTS.md
+    new file:   public/images/IMAGE_CREATION_GUIDE.md
+    new file:   public/images/MISSING_IMAGES_TRACKER.md
+    new file:   public/images/QUICK_START.md
+
+
+NOTE ABOUT IMAGE FILES:
+
+Image files (.jpg, .png) are NOT affected by this issue.
+They will be tracked normally once created:
+    ✅ zebracat-review-og.jpg
+    ✅ genspark-review-twitter.jpg
+    ✅ etc.
+
+
+RECOMMENDED ACTION:
+
+Use Option 1 (remove *.md from .gitignore) because:
+- These documentation files are PART OF THE PROJECT
+- They should be version controlled
+- Other markdown files in the project should also be tracked
+- The .gitignore *.md rule is too broad and prevents important docs from being tracked
+
+
+WHY THIS MATTERS:
+
+Without these markdown files in git:
+❌ Other developers won't have access to the image creation guides
+❌ Future you won't remember the exact specifications
+❌ The progress tracker will be lost
+❌ Onboarding new team members will be difficult
+
+
+QUICK FIX COMMAND:
+
+If you want to quickly add these files right now:
+    cd /home/coolio/dev/projects/spectrumAIReviews
+    git add -f public/images/*.md
+    git commit -m "Add social sharing image documentation (5 guides)"
+    git push origin main
+
+Then later, update .gitignore to remove the *.md exclusion.
+
+
+==========================================
+This note will be deleted after the issue is resolved.

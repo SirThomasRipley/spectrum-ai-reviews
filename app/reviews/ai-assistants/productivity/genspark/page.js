@@ -2,7 +2,7 @@ import GensparkReviewClient from './GensparkReviewClient';
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Genspark AI Review 2025: 47 Phone Calls Tested - Does It Work?',
+  title: 'Genspark AI Review 2025: 47 Phone Calls - Verdict',
   description: 'Genspark AI review: 47 phone calls, 83% success rate, credit costs revealed. Super Agent testing, troubleshooting guide. 3.7/5 rating. Plus $24.99/mo.',
   keywords: 'genspark, genspark ai, ai agent, super agent, agentic ai, ai agentic engine, all-in-one ai workspace, ai call, ai chat, super ai agent, ai slides, ai sheets, genspark ai browser, ai powered, chatgpt, perplexity, openai, prompt, multimodal ai, deep research, ai docs, productivity, privacy policy, mobile app, web browser, gpt-4, large language model, artificial intelligence, personalized content, trustworthy ai, real-time, comprehensive ai, next generation ai, coding, programming, developer, api, ecosystem, interface, workflow, transform, empower, enhance, accelerate, smarter, future of ai, using genspark, organizational, startup, employee retention, users and revenue, month-over-month revenue growth, scaling, use cases, multi-step, cache, information, language, email, feedback, deck, excel, slide, sheet, download, launch, app, browser, engine, technology, capability, tailor, output, ui, workspace, workforce',
   authors: [{ name: 'Michael Anderson', url: 'https://spectrumaireviews.com/about' }],

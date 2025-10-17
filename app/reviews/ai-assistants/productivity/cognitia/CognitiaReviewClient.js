@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import AuthorBio from '@/components/AuthorBio';
+import RelatedReviews from '@/components/RelatedReviews';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { linkMap } from '@/utils/linkMap';
 import Emoji from '@/components/Emoji';
@@ -372,7 +374,7 @@ const CognitiaReviewClient = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Design & User Interface Excellence</h2>
 
               <div className="mb-8">
-                <img
+                <Image width={1200} height={675} unoptimized={true}
                   src="https://www.cognitia-ai.com/1749586778175.jpeg"
                   alt="Cognitia AI Dashboard Interface"
                   className="w-full rounded-lg shadow-lg border border-gray-200"
@@ -1402,6 +1404,14 @@ const CognitiaReviewClient = () => {
                 <Emoji label="lightbulb">💡</Emoji> Use our exclusive link for priority support and latest updates
               </p>
             </div>
+
+            {/* Related Reviews */}
+            <RelatedReviews
+              currentSlug="cognitia"
+              service="ai-assistant-agent-reviews"
+              category="productivity"
+              limit={3}
+            />
 
             {/* Author Bio */}
             <div className="mt-12">
